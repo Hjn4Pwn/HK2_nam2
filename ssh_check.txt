@@ -1,0 +1,1 @@
+ssh dont need passwd when we push 
