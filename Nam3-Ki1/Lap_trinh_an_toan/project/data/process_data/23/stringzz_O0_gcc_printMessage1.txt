@@ -1,0 +1,14 @@
+endbr64 
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x10
+mov    QWORD PTR [rbp-0x8],rdi
+lea    rax,[rip+0xd85]        
+mov    rdi,rax
+call   10c0 <puts@plt>
+mov    rax,QWORD PTR [rbp-0x8]
+mov    rdi,rax
+call   125c <printMessage2>
+nop
+leave  
+ret

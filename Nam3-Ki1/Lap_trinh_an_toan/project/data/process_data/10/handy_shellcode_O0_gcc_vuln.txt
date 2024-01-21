@@ -1,0 +1,15 @@
+endbr64 
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x10
+mov    QWORD PTR [rbp-0x8],rdi
+mov    rax,QWORD PTR [rbp-0x8]
+mov    rdi,rax
+mov    eax,0x0
+call   10d0 <gets@plt>
+mov    rax,QWORD PTR [rbp-0x8]
+mov    rdi,rax
+call   10a0 <puts@plt>
+nop
+leave  
+ret

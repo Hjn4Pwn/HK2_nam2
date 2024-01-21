@@ -1,0 +1,41 @@
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x20
+lea    rdi,[rip+0xe23]        
+mov    al,0x0
+call   1040 <printf@plt>
+lea    rdi,[rip+0xe1f]        
+lea    rsi,[rip+0xe21]        
+call   1080 <fopen@plt>
+mov    QWORD PTR [rbp-0x10],rax
+cmp    QWORD PTR [rbp-0x10],0x0
+jne    123d <win_IV+0x4d>
+lea    rdi,[rip+0xe08]        
+mov    al,0x0
+call   1040 <printf@plt>
+xor    edi,edi
+call   10a0 <exit@plt>
+mov    rdi,QWORD PTR [rbp-0x10]
+call   1050 <fgetc@plt>
+mov    BYTE PTR [rbp-0x11],al
+movsx  eax,BYTE PTR [rbp-0x11]
+cmp    eax,0xffffffff
+je     1279 <win_IV+0x89>
+movsx  esi,BYTE PTR [rbp-0x11]
+lea    rdi,[rip+0xde9]        
+mov    al,0x0
+call   1040 <printf@plt>
+mov    rdi,QWORD PTR [rbp-0x10]
+call   1050 <fgetc@plt>
+mov    BYTE PTR [rbp-0x11],al
+jmp    1249 <win_IV+0x59>
+lea    rdi,[rip+0xdaa]        
+mov    al,0x0
+call   1040 <printf@plt>
+mov    rdi,QWORD PTR [rbp-0x10]
+call   1030 <fclose@plt>
+mov    eax,DWORD PTR [rbp-0x4]
+add    rsp,0x20
+pop    rbp
+ret    
+nop    DWORD PTR [rax+0x0]

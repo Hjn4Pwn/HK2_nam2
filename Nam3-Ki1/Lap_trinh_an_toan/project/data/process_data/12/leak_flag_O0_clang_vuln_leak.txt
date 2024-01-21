@@ -1,0 +1,26 @@
+push   rbp
+mov    rbp,rsp
+sub    rsp,0xc0
+lea    rdi,[rbp-0x40]
+mov    esi,0x40
+call   11b0 <readflag>
+lea    rdi,[rip+0xe1d]        
+mov    al,0x0
+call   1040 <printf@plt>
+lea    rsi,[rbp-0xc0]
+lea    rdi,[rip+0xe37]        
+mov    al,0x0
+call   1090 <__isoc99_scanf@plt>
+lea    rdi,[rip+0xe2f]        
+mov    al,0x0
+call   1040 <printf@plt>
+lea    rdi,[rbp-0xc0]
+mov    al,0x0
+call   1040 <printf@plt>
+lea    rdi,[rip+0xe24]        
+mov    al,0x0
+call   1040 <printf@plt>
+add    rsp,0xc0
+pop    rbp
+ret    
+nop

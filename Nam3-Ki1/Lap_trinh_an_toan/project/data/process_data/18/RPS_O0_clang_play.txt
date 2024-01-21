@@ -1,0 +1,57 @@
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x80
+xor    eax,eax
+mov    edi,eax
+call   1090 <time@plt>
+mov    edi,eax
+call   1070 <srand@plt>
+lea    rdi,[rip+0xcd9]        
+mov    al,0x0
+call   1040 <printf@plt>
+lea    rdi,[rbp-0x70]
+mov    esi,0x64
+call   11e0 <tgetinput>
+mov    DWORD PTR [rbp-0x74],eax
+cmp    DWORD PTR [rbp-0x74],0xfffffffd
+jne    1409 <play+0x59>
+lea    rdi,[rip+0xce3]        
+mov    al,0x0
+call   1040 <printf@plt>
+xor    edi,edi
+call   10b0 <exit@plt>
+call   10d0 <rand@plt>
+mov    ecx,0x3
+cdq    
+idiv   ecx
+mov    DWORD PTR [rbp-0x78],edx
+lea    rsi,[rbp-0x70]
+lea    rdi,[rip+0xcc4]        
+mov    al,0x0
+call   1040 <printf@plt>
+movsxd rcx,DWORD PTR [rbp-0x78]
+lea    rax,[rip+0x2c4a]        
+mov    rsi,QWORD PTR [rax+rcx*8]
+lea    rdi,[rip+0xcb7]        
+mov    al,0x0
+call   1040 <printf@plt>
+lea    rdi,[rbp-0x70]
+movsxd rcx,DWORD PTR [rbp-0x78]
+lea    rax,[rip+0x2c49]        
+mov    rsi,QWORD PTR [rax+rcx*8]
+call   10c0 <strstr@plt>
+cmp    rax,0x0
+je     147f <play+0xcf>
+lea    rdi,[rip+0xca0]        
+call   1030 <puts@plt>
+mov    BYTE PTR [rbp-0x1],0x1
+jmp    148f <play+0xdf>
+lea    rdi,[rip+0xca0]        
+call   1030 <puts@plt>
+mov    BYTE PTR [rbp-0x1],0x0
+mov    al,BYTE PTR [rbp-0x1]
+and    al,0x1
+movzx  eax,al
+add    rsp,0x80
+pop    rbp
+ret

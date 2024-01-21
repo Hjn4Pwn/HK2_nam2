@@ -1,0 +1,50 @@
+endbr64 
+push   rbp
+lea    rdi,[rip+0xd1c]        
+sub    rsp,0x210
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rsp+0x208],rax
+xor    eax,eax
+mov    rbp,rsp
+call   10d0 <puts@plt>
+mov    rdx,QWORD PTR [rip+0x2d0b]        
+mov    esi,0x200
+mov    rdi,rbp
+call   1100 <fgets@plt>
+xor    esi,esi
+mov    edx,0xa
+mov    rdi,rbp
+call   1110 <strtol@plt>
+test   rax,rax
+je     13a8 <do_stuff+0xc8>
+mov    rdx,QWORD PTR [rip+0x2cbb]        
+mov    rcx,rdx
+sar    rcx,0x3f
+shr    rcx,0x34
+add    rdx,rcx
+and    edx,0xfff
+sub    rdx,rcx
+add    rdx,0x1
+cmp    rax,rdx
+je     1390 <do_stuff+0xb0>
+lea    rdi,[rip+0xd1f]        
+call   10d0 <puts@plt>
+xor    eax,eax
+mov    rdx,QWORD PTR [rsp+0x208]
+sub    rdx,QWORD PTR fs
+jne    13b8 <do_stuff+0xd8>
+add    rsp,0x210
+pop    rbp
+ret    
+nop    WORD PTR [rax+rax*1+0x0]
+lea    rdi,[rip+0xc99]        
+call   10d0 <puts@plt>
+mov    eax,0x1
+jmp    136b <do_stuff+0x8b>
+nop    DWORD PTR [rax+rax*1+0x0]
+lea    rdi,[rip+0xcb9]        
+call   10d0 <puts@plt>
+xor    eax,eax
+jmp    136b <do_stuff+0x8b>
+call   10e0 <__stack_chk_fail@plt>
+nop    DWORD PTR [rax]

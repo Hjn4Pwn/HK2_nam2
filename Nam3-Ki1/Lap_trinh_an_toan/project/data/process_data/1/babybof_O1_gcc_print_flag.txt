@@ -1,0 +1,23 @@
+endbr64 
+push   rbx
+sub    rsp,0x110
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rsp+0x108],rax
+xor    eax,eax
+lea    rsi,[rip+0xdd5]        
+lea    rdi,[rip+0xdd0]        
+call   1100 <fopen@plt>
+mov    rdx,rax
+mov    rbx,rsp
+mov    esi,0x100
+mov    rdi,rbx
+call   10d0 <fgets@plt>
+mov    rdi,rbx
+call   10b0 <puts@plt>
+mov    rax,QWORD PTR [rsp+0x108]
+sub    rax,QWORD PTR fs
+jne    1272 <print_flag+0x69>
+add    rsp,0x110
+pop    rbx
+ret    
+call   10c0 <__stack_chk_fail@plt>

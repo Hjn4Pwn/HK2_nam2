@@ -1,0 +1,51 @@
+push   rbp
+mov    rbp,rsp
+sub    rsp,0xb0
+mov    DWORD PTR [rbp-0x4],edi
+mov    QWORD PTR [rbp-0x10],0x0
+mov    QWORD PTR [rbp-0x18],0x0
+lea    rdi,[rip+0xdff]        
+lea    rsi,[rip+0xe01]        
+call   10b0 <fopen@plt>
+mov    QWORD PTR [rbp-0x10],rax
+cmp    rax,0x0
+jne    1235 <win_crash+0x55>
+lea    rdi,[rip+0xde9]        
+call   1040 <puts@plt>
+mov    edi,0x1
+call   10c0 <exit@plt>
+mov    rdi,QWORD PTR [rbp-0x10]
+call   1090 <fileno@plt>
+mov    edi,eax
+lea    rsi,[rbp-0xa8]
+call   10d0 <fstat@plt>
+cmp    eax,0x0
+je     126b <win_crash+0x8b>
+lea    rdi,[rip+0xe02]        
+call   1040 <puts@plt>
+mov    edi,0x1
+call   10c0 <exit@plt>
+mov    rdi,QWORD PTR [rbp-0x78]
+add    rdi,0x1
+mov    esi,0x1
+call   1070 <calloc@plt>
+mov    QWORD PTR [rbp-0x18],rax
+cmp    QWORD PTR [rbp-0x18],0x0
+jne    12a2 <win_crash+0xc2>
+lea    rdi,[rip+0xe25]        
+call   1040 <puts@plt>
+mov    edi,0x1
+call   10c0 <exit@plt>
+mov    rdi,QWORD PTR [rbp-0x18]
+mov    rdx,QWORD PTR [rbp-0x78]
+mov    rcx,QWORD PTR [rbp-0x10]
+mov    esi,0x1
+call   1050 <fread@plt>
+mov    rdi,QWORD PTR [rbp-0x18]
+call   1040 <puts@plt>
+mov    rdi,QWORD PTR [rbp-0x18]
+call   1030 <free@plt>
+xor    edi,edi
+call   10c0 <exit@plt>
+cs nop WORD PTR [rax+rax*1+0x0]
+nop    DWORD PTR [rax+rax*1+0x0]

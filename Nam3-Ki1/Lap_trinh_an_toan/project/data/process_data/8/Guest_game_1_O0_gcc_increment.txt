@@ -1,0 +1,8 @@
+endbr64 
+push   rbp
+mov    rbp,rsp
+mov    QWORD PTR [rbp-0x8],rdi
+mov    rax,QWORD PTR [rbp-0x8]
+add    rax,0x1
+pop    rbp
+ret

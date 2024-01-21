@@ -1,0 +1,89 @@
+push   rbp
+mov    rbp,rsp
+sub    rsp,0xc0
+mov    QWORD PTR [rbp-0x10],rdi
+mov    DWORD PTR [rbp-0x14],esi
+mov    DWORD PTR [rbp-0xac],0x0
+mov    DWORD PTR [rbp-0xb0],0x0
+cmp    DWORD PTR [rbp-0x14],0x0
+ja     121a <tgetinput+0x4a>
+lea    rdi,[rip+0xdfd]        
+mov    al,0x0
+call   1060 <printf@plt>
+mov    DWORD PTR [rbp-0x4],0xfffffffe
+jmp    1394 <tgetinput+0x1c4>
+jmp    121f <tgetinput+0x4f>
+lea    rax,[rbp-0x98]
+mov    QWORD PTR [rbp-0xc0],rax
+mov    DWORD PTR [rbp-0xb4],0x0
+mov    eax,DWORD PTR [rbp-0xb4]
+cmp    rax,0x10
+jae    1270 <tgetinput+0xa0>
+mov    rax,QWORD PTR [rbp-0xc0]
+mov    ecx,DWORD PTR [rbp-0xb4]
+mov    QWORD PTR [rax+rcx*8],0x0
+mov    eax,DWORD PTR [rbp-0xb4]
+add    eax,0x1
+mov    DWORD PTR [rbp-0xb4],eax
+jmp    1237 <tgetinput+0x67>
+jmp    1275 <tgetinput+0xa5>
+mov    rax,QWORD PTR [rbp-0x98]
+or     rax,0x1
+mov    QWORD PTR [rbp-0x98],rax
+mov    QWORD PTR [rbp-0xa8],0x3c
+mov    QWORD PTR [rbp-0xa0],0x0
+mov    edi,0x1
+lea    rsi,[rbp-0x98]
+xor    eax,eax
+mov    ecx,eax
+lea    r8,[rbp-0xa8]
+mov    rdx,rcx
+call   10a0 <select@plt>
+mov    DWORD PTR [rbp-0xac],eax
+cmp    DWORD PTR [rbp-0xac],0xffffffff
+jne    12e9 <tgetinput+0x119>
+lea    rdi,[rip+0xd58]        
+mov    al,0x0
+call   1060 <printf@plt>
+mov    DWORD PTR [rbp-0x4],0xffffffff
+jmp    1394 <tgetinput+0x1c4>
+cmp    DWORD PTR [rbp-0xac],0x0
+je     137f <tgetinput+0x1af>
+mov    rsi,QWORD PTR [rbp-0x10]
+mov    eax,DWORD PTR [rbp-0x14]
+sub    eax,0x1
+mov    eax,eax
+mov    edx,eax
+xor    edi,edi
+call   1080 <read@plt>
+mov    DWORD PTR [rbp-0xb0],eax
+mov    rax,QWORD PTR [rbp-0x10]
+mov    ecx,DWORD PTR [rbp-0xb0]
+sub    ecx,0x1
+movsxd rcx,ecx
+movsx  eax,BYTE PTR [rax+rcx*1]
+cmp    eax,0xa
+jne    134c <tgetinput+0x17c>
+mov    eax,DWORD PTR [rbp-0xb0]
+add    eax,0xffffffff
+mov    DWORD PTR [rbp-0xb0],eax
+mov    rax,QWORD PTR [rbp-0x10]
+movsxd rcx,DWORD PTR [rbp-0xb0]
+mov    BYTE PTR [rax+rcx*1],0x0
+cmp    DWORD PTR [rbp-0xb0],0x0
+jne    1373 <tgetinput+0x1a3>
+lea    rdi,[rip+0xce9]        
+mov    al,0x0
+call   1060 <printf@plt>
+mov    DWORD PTR [rbp-0x4],0xfffffffc
+jmp    1394 <tgetinput+0x1c4>
+mov    DWORD PTR [rbp-0x4],0x0
+jmp    1394 <tgetinput+0x1c4>
+lea    rdi,[rip+0xcd3]        
+mov    al,0x0
+call   1060 <printf@plt>
+mov    DWORD PTR [rbp-0x4],0xfffffffd
+mov    eax,DWORD PTR [rbp-0x4]
+add    rsp,0xc0
+pop    rbp
+ret

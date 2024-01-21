@@ -1,0 +1,3 @@
+lea typeone typethree
+jmp typeseven
+nop typethree

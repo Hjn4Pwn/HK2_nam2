@@ -1,0 +1,24 @@
+push typeone
+sub typeone typefive
+lea typeone typethree
+call typesix
+lea typeone typethree
+lea typeone typethree
+call typesix
+test typeone typeone
+jne typeseven
+lea typeone typethree
+call typesix
+mov typeone typefive
+call typesix
+mov typeone typeone
+mov typeone typeone
+mov typeone typefive
+mov typeone typeone
+call typesix
+mov typeone typeone
+call typesix
+xor typeone typeone
+call typesix
+cs typefour
+nop typefour

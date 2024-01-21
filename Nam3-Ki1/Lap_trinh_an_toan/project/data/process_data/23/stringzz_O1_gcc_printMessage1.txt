@@ -1,0 +1,9 @@
+endbr64 
+push   rbx
+mov    rbx,rdi
+lea    rdi,[rip+0xda4]        
+call   10c0 <puts@plt>
+mov    rdi,rbx
+call   1251 <printMessage2>
+pop    rbx
+ret

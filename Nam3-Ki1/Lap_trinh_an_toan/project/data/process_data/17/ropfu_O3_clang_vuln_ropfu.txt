@@ -1,0 +1,9 @@
+sub    rsp,0x18
+lea    rdi,[rip+0xe79]        
+call   1030 <puts@plt>
+mov    rdi,rsp
+xor    eax,eax
+call   1050 <gets@plt>
+add    rsp,0x18
+ret    
+nop

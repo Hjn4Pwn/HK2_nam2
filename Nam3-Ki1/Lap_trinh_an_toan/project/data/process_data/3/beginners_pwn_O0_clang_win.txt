@@ -1,0 +1,8 @@
+push   rbp
+mov    rbp,rsp
+lea    rdi,[rip+0xe29]        
+call   1060 <system@plt>
+pop    rbp
+ret    
+cs nop WORD PTR [rax+rax*1+0x0]
+nop    DWORD PTR [rax+0x0]

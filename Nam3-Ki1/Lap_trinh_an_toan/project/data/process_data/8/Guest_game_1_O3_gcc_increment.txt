@@ -1,0 +1,4 @@
+endbr64 
+lea    rax,[rdi+0x1]
+ret    
+nop    DWORD PTR [rax+0x0]

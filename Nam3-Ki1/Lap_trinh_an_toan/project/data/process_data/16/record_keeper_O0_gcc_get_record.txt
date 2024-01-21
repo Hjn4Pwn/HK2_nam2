@@ -1,0 +1,38 @@
+endbr64 
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x90
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rbp-0x8],rax
+xor    eax,eax
+lea    rax,[rip+0xe56]        
+mov    rdi,rax
+mov    eax,0x0
+call   1080 <printf@plt>
+mov    QWORD PTR [rbp-0x90],0x0
+mov    QWORD PTR [rbp-0x88],0x0
+mov    QWORD PTR [rbp-0x80],0x0
+mov    QWORD PTR [rbp-0x78],0x0
+mov    QWORD PTR [rbp-0x70],0x0
+mov    QWORD PTR [rbp-0x68],0x0
+mov    QWORD PTR [rbp-0x60],0x0
+mov    QWORD PTR [rbp-0x58],0x0
+mov    QWORD PTR [rbp-0x50],0x0
+mov    QWORD PTR [rbp-0x48],0x0
+mov    QWORD PTR [rbp-0x40],0x0
+mov    QWORD PTR [rbp-0x38],0x0
+mov    QWORD PTR [rbp-0x30],0x0
+mov    QWORD PTR [rbp-0x28],0x0
+mov    QWORD PTR [rbp-0x20],0x0
+mov    QWORD PTR [rbp-0x18],0x0
+lea    rax,[rbp-0x90]
+mov    rdi,rax
+mov    eax,0x0
+call   1090 <gets@plt>
+nop
+mov    rax,QWORD PTR [rbp-0x8]
+sub    rax,QWORD PTR fs
+je     126a <get_record+0xe1>
+call   1070 <__stack_chk_fail@plt>
+leave  
+ret

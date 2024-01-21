@@ -1,0 +1,41 @@
+endbr64 
+push   r12
+mov    r12,rdi
+push   rbp
+push   rbx
+movzx  ebx,BYTE PTR [rdi]
+test   bl,bl
+je     12d0 <check+0x50>
+mov    rbp,rdi
+jmp    12c7 <check+0x47>
+nop    WORD PTR [rax+rax*1+0x0]
+call   1110 <__ctype_b_loc@plt>
+mov    r8,rax
+movsx  rax,bl
+mov    rdx,QWORD PTR [r8]
+test   BYTE PTR [rdx+rax*2+0x1],0x4
+jne    12bb <check+0x3b>
+cmp    bl,0x20
+jne    12f0 <check+0x70>
+movzx  ebx,BYTE PTR [rbp+0x1]
+add    rbp,0x1
+test   bl,bl
+je     12d0 <check+0x50>
+cmp    bl,0xa
+jne    12a0 <check+0x20>
+mov    BYTE PTR [rbp+0x0],0x0
+mov    rdx,r12
+lea    rsi,[rip+0xd4e]        
+mov    edi,0x1
+xor    eax,eax
+call   10e0 <__printf_chk@plt>
+pop    rbx
+mov    eax,0x1
+pop    rbp
+pop    r12
+ret    
+lea    rdi,[rip+0xd11]        
+call   10b0 <puts@plt>
+mov    edi,0x1
+call   1100 <exit@plt>
+cs nop WORD PTR [rax+rax*1+0x0]

@@ -1,0 +1,34 @@
+push   r15
+push   r14
+push   rbx
+mov    r14,rdi
+mov    r15,rdi
+jmp    1204 <check+0x14>
+nop    DWORD PTR [rax]
+add    r15,0x1
+movsx  rbx,BYTE PTR [r15]
+test   rbx,rbx
+je     1240 <check+0x50>
+cmp    bl,0xa
+je     123c <check+0x4c>
+call   1090 <__ctype_b_loc@plt>
+mov    rax,QWORD PTR [rax]
+test   BYTE PTR [rax+rbx*2+0x1],0x4
+jne    1200 <check+0x10>
+cmp    bl,0x20
+je     1200 <check+0x10>
+lea    rdi,[rip+0xdd7]        
+call   1030 <puts@plt>
+mov    edi,0x1
+call   1080 <exit@plt>
+mov    BYTE PTR [r15],0x0
+lea    rdi,[rip+0xddd]        
+mov    rsi,r14
+xor    eax,eax
+call   1050 <printf@plt>
+mov    eax,0x1
+pop    rbx
+pop    r14
+pop    r15
+ret    
+nop    DWORD PTR [rax+0x0]

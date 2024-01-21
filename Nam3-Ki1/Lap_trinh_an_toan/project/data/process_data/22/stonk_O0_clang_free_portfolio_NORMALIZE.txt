@@ -1,0 +1,24 @@
+push typeone
+mov typeone typeone
+sub typeone typefive
+mov typethree typeone
+mov typeone typethree
+mov typeone typethree
+mov typethree typeone
+mov typethree typefive
+cmp typethree typefive
+je typeseven
+mov typeone typethree
+mov typeone typethree
+mov typethree typeone
+mov typeone typethree
+call typesix
+mov typeone typethree
+mov typethree typeone
+jmp typeseven
+mov typeone typethree
+call typesix
+add typeone typefive
+pop typeone
+ret
+nop typethree

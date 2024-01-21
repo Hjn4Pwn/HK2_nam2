@@ -1,0 +1,15 @@
+push   rbx
+mov    rbx,rdi
+lea    rdi,[rip+0xe27]        
+call   1030 <puts@plt>
+lea    rdi,[rip+0xe0f]        
+call   1030 <puts@plt>
+lea    rdi,[rip+0xdf1]        
+call   1030 <puts@plt>
+mov    rdi,rbx
+xor    eax,eax
+call   1040 <printf@plt>
+pop    rbx
+ret    
+cs nop WORD PTR [rax+rax*1+0x0]
+xchg   ax,ax

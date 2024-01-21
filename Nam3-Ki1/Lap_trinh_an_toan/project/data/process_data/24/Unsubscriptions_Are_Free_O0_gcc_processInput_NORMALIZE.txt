@@ -1,0 +1,78 @@
+endbr64
+push typeone
+mov typeone typeone
+push typeone
+sub typeone typefive
+lea typeone typethree
+mov typeone typeone
+lea typeone typethree
+mov typeone typeone
+mov typeone typefive
+call typesix
+movzx typeone typethree
+movsx typeone typeeight
+mov typeone typeone
+call typesix
+mov typethree typeeight
+movzx typeone typethree
+movsx typeone typeeight
+sub typeone typefive
+cmp typeone typefive
+ja typeseven
+mov typeone typeone
+lea typeone typethree
+lea typeone typethree
+mov typeone typethree
+cdqe
+lea typeone typethree
+add typeone typeone
+notrack typeeight
+mov typeone typethree
+test typeone typeone
+je typeseven
+mov typeone typethree
+lea typeone typethree
+mov typetwo typeone
+jmp typeseven
+lea typeone typethree
+mov typeone typeone
+call typesix
+jmp typeseven
+mov typeone typethree
+lea typeone typethree
+mov typetwo typeone
+jmp typeseven
+mov typeone typethree
+lea typeone typethree
+mov typetwo typeone
+jmp typeseven
+mov typeone typethree
+lea typeone typethree
+mov typetwo typeone
+lea typeone typethree
+mov typeone typeone
+call typesix
+lea typeone typethree
+mov typeone typeone
+call typesix
+lea typeone typethree
+mov typeone typeone
+call typesix
+mov typeone typethree
+call typesix
+mov typethree typeone
+jmp typeseven
+mov typeone typefive
+call typesix
+jmp typeseven
+mov typeone typefive
+call typesix
+lea typeone typethree
+mov typeone typeone
+call typesix
+mov typeone typefive
+call typesix
+nop
+mov typeone typethree
+leave
+ret

@@ -1,0 +1,40 @@
+push   rbx
+sub    rsp,0x200
+lea    rdi,[rip+0xe51]        
+call   1030 <puts@plt>
+mov    rax,QWORD PTR [rip+0x2ded]        
+mov    rdx,QWORD PTR [rax]
+mov    rbx,rsp
+mov    rdi,rbx
+mov    esi,0x200
+call   1060 <fgets@plt>
+mov    rdi,rbx
+xor    esi,esi
+mov    edx,0xa
+call   1070 <strtol@plt>
+mov    rcx,QWORD PTR [rip+0x2de4]        
+lea    rdx,[rcx+0xfff]
+test   rcx,rcx
+cmovns rdx,rcx
+and    rdx,0xfffffffffffff000
+neg    rdx
+add    rcx,rdx
+add    rcx,0x1
+cmp    rax,rcx
+lea    rcx,[rip+0xe3a]        
+lea    rdx,[rip+0xe2c]        
+cmove  rdx,rcx
+sete   cl
+test   rax,rax
+setne  al
+lea    rdi,[rip+0xdfd]        
+cmovne rdi,rdx
+and    al,cl
+movzx  ebx,al
+call   1030 <puts@plt>
+mov    eax,ebx
+add    rsp,0x200
+pop    rbx
+ret    
+cs nop WORD PTR [rax+rax*1+0x0]
+nop    DWORD PTR [rax+rax*1+0x0]

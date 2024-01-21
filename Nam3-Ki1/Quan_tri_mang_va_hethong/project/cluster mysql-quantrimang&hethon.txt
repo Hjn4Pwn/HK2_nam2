@@ -1,0 +1,116 @@
+
+https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-innodb-cluster-working-with-cluster.html
+https://123host.vn/tailieu/kb/vps/huong-dan-cai-dat-va-cau-hinh-mysql-innodb-cluster-tren-ubuntu-20-04.html
+https://severalnines.com/resources/whitepapers/galera-cluster-mysql-tutorial/
+
+sudo su
+apt-get update
+apt-get upgrade
+apt install mysql-server -y
+snap install mysql-shell 
+
+apt-get install vim -y
+apt install net-tools
+
+
+172.16.200.128 ubuntu1 db1
+172.16.200.129 ubuntu2 db2
+172.16.200.130 ubuntu3 db3
+
+chmod 777 /etc/hosts
+chmod 777 /etc/mysql/mysql.conf.d/mysqld.cnf
+
+vim /etc/mysql/mysql.conf.d/mysqld.cnf
+
+netstat -tpln  | grep 3306
+systemctl restart mysql
+netstat -tpln  | grep 3306
+
+
+mysql
+
+CREATE USER 'clusteradmin'@'%' IDENTIFIED BY 'PASSWORD';
+GRANT ALL PRIVILEGES ON *.* TO 'clusteradmin' WITH GRANT OPTION;
+reset master;
+flush privileges;
+
+SET PASSWORD FOR 'clusteradmin'@'%' = '123456789';
+FLUSH PRIVILEGES;
+
+
+mysqlsh --classic
+ 
+\\help
+
+
+
+dba.check_instance_configuration('clusteradmin@db3');
+dba.configure_instance('clusteradmin@db3');
+dba.check_instance_configuration('clusteradmin@db3');
+
+shell.connect('clusteradmin@db1');
+cluster=dba.create_cluster('mysql_cluster');
+
+cluster.status();
+
+cluster.add_instance('clusteradmin@db2');
+cluster.add_instance('clusteradmin@db3');
+
+
+cluster.status();
+
+cluster = dba.get_cluster();
+dba.drop_metadata_schema() 
+dba.reboot_cluster_from_complete_outage()
+
+cluster.switch_to_multi_primary_mode()
+
+Đầu tiên cần tạo database
+
+
+
+
+
+
+
+
+DEMO:
+
+///////////////////////////////////////////////////////////////////////
+CREATE DATABASE demo;
+USE demo;
+
+CREATE TABLE test (
+    id INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    age INT
+);
+
+SHOW TABLES;
+
+INSERT INTO test (id, name, age) VALUES
+    (1, 'DELETE', 30),
+    (2, 'Bob Smith', 22),
+    (3, 'Alice Johnson', 28),
+    (4, 'Huy Na', 20);
+
+SELECT * FROM test;
+
+INSERT INTO test (id, name, age) VALUES (5, 'ADD', 25);
+
+DELETE FROM test WHERE name = 'DELETE';
+
+UPDATE test SET age = 30 WHERE name = 'Huy Na';
+
+///////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+

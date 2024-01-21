@@ -1,0 +1,25 @@
+push   rbx
+lea    rdi,[rip+0xdd5]        
+lea    rsi,[rip+0xdb7]        
+call   10e0 <fopen@plt>
+test   rax,rax
+je     12be <read_canary+0x3e>
+mov    rbx,rax
+lea    rdi,[rip+0x2df1]        
+mov    esi,0x1
+mov    edx,0x4
+mov    rcx,rax
+call   1040 <fread@plt>
+mov    rdi,rbx
+pop    rbx
+jmp    1050 <fclose@plt>
+lea    rdi,[rip+0xd48]        
+lea    rsi,[rip+0xd9c]        
+lea    rdx,[rip+0xdcc]        
+xor    eax,eax
+call   1070 <printf@plt>
+mov    rax,QWORD PTR [rip+0x2cff]        
+mov    rdi,QWORD PTR [rax]
+call   10a0 <fflush@plt>
+xor    edi,edi
+call   10f0 <exit@plt>

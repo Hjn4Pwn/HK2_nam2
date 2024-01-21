@@ -1,0 +1,92 @@
+endbr64 
+push   rbp
+mov    rbp,rsp
+sub    rsp,0xd0
+mov    QWORD PTR [rbp-0xc8],rdi
+mov    DWORD PTR [rbp-0xcc],esi
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rbp-0x8],rax
+xor    eax,eax
+mov    DWORD PTR [rbp-0xac],0x0
+mov    DWORD PTR [rbp-0xb4],0x0
+cmp    DWORD PTR [rbp-0xcc],0x0
+jne    12ea <tgetinput+0x61>
+lea    rax,[rip+0xd40]        
+mov    rdi,rax
+call   1110 <puts@plt>
+mov    eax,0xfffffffe
+jmp    1447 <tgetinput+0x1be>
+lea    rax,[rbp-0x90]
+mov    QWORD PTR [rbp-0xa8],rax
+mov    DWORD PTR [rbp-0xb0],0x0
+jmp    1320 <tgetinput+0x97>
+mov    rax,QWORD PTR [rbp-0xa8]
+mov    edx,DWORD PTR [rbp-0xb0]
+mov    QWORD PTR [rax+rdx*8],0x0
+add    DWORD PTR [rbp-0xb0],0x1
+cmp    DWORD PTR [rbp-0xb0],0xf
+jbe    1304 <tgetinput+0x7b>
+mov    rax,QWORD PTR [rbp-0x90]
+or     rax,0x1
+mov    QWORD PTR [rbp-0x90],rax
+mov    QWORD PTR [rbp-0xa0],0x3c
+mov    QWORD PTR [rbp-0x98],0x0
+lea    rdx,[rbp-0xa0]
+lea    rax,[rbp-0x90]
+mov    r8,rdx
+mov    ecx,0x0
+mov    edx,0x0
+mov    rsi,rax
+mov    edi,0x1
+call   1170 <select@plt>
+mov    DWORD PTR [rbp-0xac],eax
+cmp    DWORD PTR [rbp-0xac],0xffffffff
+jne    13a1 <tgetinput+0x118>
+lea    rax,[rip+0xcb2]        
+mov    rdi,rax
+call   1110 <puts@plt>
+mov    eax,0xffffffff
+jmp    1447 <tgetinput+0x1be>
+cmp    DWORD PTR [rbp-0xac],0x0
+je     1433 <tgetinput+0x1aa>
+mov    eax,DWORD PTR [rbp-0xcc]
+sub    eax,0x1
+mov    edx,eax
+mov    rax,QWORD PTR [rbp-0xc8]
+mov    rsi,rax
+mov    edi,0x0
+call   1150 <read@plt>
+mov    DWORD PTR [rbp-0xb4],eax
+mov    eax,DWORD PTR [rbp-0xb4]
+cdqe   
+lea    rdx,[rax-0x1]
+mov    rax,QWORD PTR [rbp-0xc8]
+add    rax,rdx
+movzx  eax,BYTE PTR [rax]
+cmp    al,0xa
+jne    140d <tgetinput+0x184>
+sub    DWORD PTR [rbp-0xb4],0x1
+mov    eax,DWORD PTR [rbp-0xb4]
+movsxd rdx,eax
+mov    rax,QWORD PTR [rbp-0xc8]
+add    rax,rdx
+mov    BYTE PTR [rax],0x0
+cmp    DWORD PTR [rbp-0xb4],0x0
+jne    142c <tgetinput+0x1a3>
+lea    rax,[rip+0xc3e]        
+mov    rdi,rax
+call   1110 <puts@plt>
+mov    eax,0xfffffffc
+jmp    1447 <tgetinput+0x1be>
+mov    eax,0x0
+jmp    1447 <tgetinput+0x1be>
+lea    rax,[rip+0xc36]        
+mov    rdi,rax
+call   1110 <puts@plt>
+mov    eax,0xfffffffd
+mov    rdx,QWORD PTR [rbp-0x8]
+sub    rdx,QWORD PTR fs
+je     145b <tgetinput+0x1d2>
+call   1120 <__stack_chk_fail@plt>
+leave  
+ret

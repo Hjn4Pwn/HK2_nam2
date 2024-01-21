@@ -1,0 +1,6 @@
+endbr64 
+sub    rsp,0x8
+lea    rdi,[rip+0xd8c]        
+call   1120 <system@plt>
+add    rsp,0x8
+ret

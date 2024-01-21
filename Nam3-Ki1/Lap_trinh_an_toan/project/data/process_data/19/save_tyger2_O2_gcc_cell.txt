@@ -1,0 +1,26 @@
+endbr64 
+push   rbp
+lea    rdi,[rip+0xdac]        
+sub    rsp,0x50
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rsp+0x48],rax
+xor    eax,eax
+call   10a0 <puts@plt>
+lea    rsi,[rip+0xe53]        
+lea    rdi,[rip+0xe4e]        
+call   10e0 <fopen@plt>
+test   rax,rax
+je     12af <cell+0x5f>
+mov    rbp,rsp
+mov    rdx,rax
+mov    esi,0x40
+mov    rdi,rbp
+call   10c0 <fgets@plt>
+mov    rdi,rbp
+call   10a0 <puts@plt>
+xor    edi,edi
+call   10f0 <exit@plt>
+lea    rdi,[rip+0xd92]        
+call   10a0 <puts@plt>
+mov    edi,0x1
+call   10f0 <exit@plt>

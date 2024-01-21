@@ -1,0 +1,51 @@
+push typeone
+mov typeone typeone
+sub typeone typefive
+mov typethree typeone
+mov typethree typefive
+mov typethree typefive
+lea typeone typethree
+lea typeone typethree
+call typesix
+mov typethree typeone
+cmp typeone typefive
+jne typeseven
+lea typeone typethree
+call typesix
+mov typeone typefive
+call typesix
+mov typeone typethree
+call typesix
+mov typeone typeone
+lea typeone typethree
+call typesix
+cmp typeone typefive
+je typeseven
+lea typeone typethree
+call typesix
+mov typeone typefive
+call typesix
+mov typeone typethree
+add typeone typefive
+mov typeone typefive
+call typesix
+mov typethree typeone
+cmp typethree typefive
+jne typeseven
+lea typeone typethree
+call typesix
+mov typeone typefive
+call typesix
+mov typeone typethree
+mov typeone typethree
+mov typeone typethree
+mov typeone typefive
+call typesix
+mov typeone typethree
+call typesix
+mov typeone typethree
+call typesix
+xor typeone typeone
+call typesix
+cs typefour
+nop typefour

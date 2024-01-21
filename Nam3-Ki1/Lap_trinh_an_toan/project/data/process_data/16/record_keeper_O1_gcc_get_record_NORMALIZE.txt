@@ -1,0 +1,33 @@
+endbr64
+sub typeone typefive
+mov typeone typeeight
+mov typethree typeone
+xor typeone typeone
+lea typeone typethree
+mov typeone typefive
+call typesix
+mov typetwo typefive
+mov typethree typefive
+mov typethree typefive
+mov typethree typefive
+mov typethree typefive
+mov typethree typefive
+mov typethree typefive
+mov typethree typefive
+mov typethree typefive
+mov typethree typefive
+mov typethree typefive
+mov typethree typefive
+mov typethree typefive
+mov typethree typefive
+mov typethree typefive
+mov typethree typefive
+mov typeone typeone
+mov typeone typefive
+call typesix
+mov typeone typethree
+sub typeone typeeight
+jne typeseven
+add typeone typefive
+ret
+call typesix

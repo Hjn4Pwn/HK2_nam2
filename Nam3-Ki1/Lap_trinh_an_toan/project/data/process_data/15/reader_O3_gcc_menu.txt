@@ -1,0 +1,31 @@
+endbr64 
+sub    rsp,0x18
+lea    rdi,[rip+0xbb5]        
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rsp+0x8],rax
+xor    eax,eax
+call   10c0 <puts@plt>
+lea    rdi,[rip+0xbab]        
+call   10c0 <puts@plt>
+lea    rdi,[rip+0xba7]        
+call   10c0 <puts@plt>
+lea    rdi,[rip+0xba3]        
+call   10c0 <puts@plt>
+lea    rdi,[rip+0xb9f]        
+call   10c0 <puts@plt>
+lea    rsi,[rsp+0x4]
+lea    rdi,[rip+0xba9]        
+xor    eax,eax
+call   1100 <__isoc99_scanf@plt>
+mov    rdi,QWORD PTR [rip+0x2b62]        
+call   1110 <getc@plt>
+lea    rdi,[rip+0xbab]        
+call   10c0 <puts@plt>
+mov    eax,DWORD PTR [rsp+0x4]
+mov    rdx,QWORD PTR [rsp+0x8]
+sub    rdx,QWORD PTR fs
+jne    14d8 <menu+0x98>
+add    rsp,0x18
+ret    
+call   10d0 <__stack_chk_fail@plt>
+nop    DWORD PTR [rax]

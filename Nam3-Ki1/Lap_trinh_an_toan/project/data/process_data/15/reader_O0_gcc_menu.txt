@@ -1,0 +1,39 @@
+endbr64 
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x10
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rbp-0x8],rax
+xor    eax,eax
+lea    rax,[rip+0xddd]        
+mov    rdi,rax
+call   10c0 <puts@plt>
+lea    rax,[rip+0xde0]        
+mov    rdi,rax
+call   10c0 <puts@plt>
+lea    rax,[rip+0xdd9]        
+mov    rdi,rax
+call   10c0 <puts@plt>
+lea    rax,[rip+0xdd2]        
+mov    rdi,rax
+call   10c0 <puts@plt>
+lea    rax,[rip+0xdcb]        
+mov    rdi,rax
+call   10c0 <puts@plt>
+lea    rax,[rbp-0xc]
+mov    rsi,rax
+lea    rax,[rip+0xdd0]        
+mov    rdi,rax
+mov    eax,0x0
+call   1110 <__isoc99_scanf@plt>
+call   1100 <getchar@plt>
+lea    rax,[rip+0xdba]        
+mov    rdi,rax
+call   10c0 <puts@plt>
+mov    eax,DWORD PTR [rbp-0xc]
+mov    rdx,QWORD PTR [rbp-0x8]
+sub    rdx,QWORD PTR fs
+je     12b5 <menu+0xac>
+call   10d0 <__stack_chk_fail@plt>
+leave  
+ret

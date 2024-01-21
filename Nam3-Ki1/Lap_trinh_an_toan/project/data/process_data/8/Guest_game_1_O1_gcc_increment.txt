@@ -1,0 +1,3 @@
+endbr64 
+lea    rax,[rdi+0x1]
+ret

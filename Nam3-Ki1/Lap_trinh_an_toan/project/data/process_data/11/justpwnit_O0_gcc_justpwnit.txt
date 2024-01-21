@@ -1,0 +1,22 @@
+endbr64 
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x40
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rbp-0x8],rax
+xor    eax,eax
+mov    DWORD PTR [rbp-0x34],0x0
+jmp    135d <justpwnit+0x34>
+lea    rax,[rbp-0x30]
+mov    rdi,rax
+call   1229 <set_element>
+add    DWORD PTR [rbp-0x34],0x1
+cmp    DWORD PTR [rbp-0x34],0x3
+jle    134d <justpwnit+0x24>
+nop
+mov    rax,QWORD PTR [rbp-0x8]
+sub    rax,QWORD PTR fs
+je     1378 <justpwnit+0x4f>
+call   10c0 <__stack_chk_fail@plt>
+leave  
+ret

@@ -1,0 +1,32 @@
+endbr64 
+push   rbx
+lea    rdi,[rip+0xd42]        
+call   1110 <puts@plt>
+lea    rsi,[rip+0xd3f]        
+lea    rdi,[rip+0xd3a]        
+call   1180 <fopen@plt>
+test   rax,rax
+je     1338 <win_IV+0x65>
+mov    rbx,rax
+mov    rdi,rax
+call   1140 <fgetc@plt>
+mov    edi,eax
+cmp    al,0xff
+je     1324 <win_IV+0x51>
+movsx  edi,dil
+call   1100 <putchar@plt>
+mov    rdi,rbx
+call   1140 <fgetc@plt>
+mov    edi,eax
+cmp    al,0xff
+jne    130d <win_IV+0x3a>
+mov    edi,0xa
+call   1100 <putchar@plt>
+mov    rdi,rbx
+call   1120 <fclose@plt>
+pop    rbx
+ret    
+lea    rdi,[rip+0xcf6]        
+call   1110 <puts@plt>
+mov    edi,0x0
+call   11a0 <exit@plt>

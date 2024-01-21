@@ -1,0 +1,51 @@
+endbr64 
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x20
+mov    QWORD PTR [rbp-0x18],rdi
+mov    rax,QWORD PTR [rbp-0x18]
+mov    QWORD PTR [rbp-0x8],rax
+jmp    1310 <check+0x81>
+mov    rax,QWORD PTR [rbp-0x8]
+movzx  eax,BYTE PTR [rax]
+cmp    al,0xa
+jne    12bd <check+0x2e>
+mov    rax,QWORD PTR [rbp-0x8]
+mov    BYTE PTR [rax],0x0
+jmp    131b <check+0x8c>
+call   1140 <__ctype_b_loc@plt>
+mov    rdx,QWORD PTR [rax]
+mov    rax,QWORD PTR [rbp-0x8]
+movzx  eax,BYTE PTR [rax]
+movsx  rax,al
+add    rax,rax
+add    rax,rdx
+movzx  eax,WORD PTR [rax]
+movzx  eax,ax
+and    eax,0x400
+test   eax,eax
+jne    12f0 <check+0x61>
+mov    rax,QWORD PTR [rbp-0x8]
+movzx  eax,BYTE PTR [rax]
+cmp    al,0x20
+jne    12f7 <check+0x68>
+add    QWORD PTR [rbp-0x8],0x1
+jmp    1310 <check+0x81>
+lea    rax,[rip+0xd0a]        
+mov    rdi,rax
+call   10b0 <puts@plt>
+mov    edi,0x1
+call   1130 <exit@plt>
+mov    rax,QWORD PTR [rbp-0x8]
+movzx  eax,BYTE PTR [rax]
+test   al,al
+jne    12a9 <check+0x1a>
+mov    rax,QWORD PTR [rbp-0x18]
+mov    rsi,rax
+lea    rax,[rip+0xcff]        
+mov    rdi,rax
+mov    eax,0x0
+call   10f0 <printf@plt>
+mov    eax,0x1
+leave  
+ret

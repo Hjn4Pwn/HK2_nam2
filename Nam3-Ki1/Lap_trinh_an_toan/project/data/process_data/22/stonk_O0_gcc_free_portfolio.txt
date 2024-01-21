@@ -1,0 +1,26 @@
+endbr64 
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x20
+mov    QWORD PTR [rbp-0x18],rdi
+mov    rax,QWORD PTR [rbp-0x18]
+mov    rax,QWORD PTR [rax+0x8]
+mov    QWORD PTR [rbp-0x10],rax
+mov    QWORD PTR [rbp-0x8],0x0
+jmp    170f <free_portfolio+0x46>
+mov    rax,QWORD PTR [rbp-0x10]
+mov    rax,QWORD PTR [rax+0x10]
+mov    QWORD PTR [rbp-0x8],rax
+mov    rax,QWORD PTR [rbp-0x10]
+mov    rdi,rax
+call   1130 <free@plt>
+mov    rax,QWORD PTR [rbp-0x8]
+mov    QWORD PTR [rbp-0x10],rax
+cmp    QWORD PTR [rbp-0x10],0x0
+jne    16ef <free_portfolio+0x26>
+mov    rax,QWORD PTR [rbp-0x18]
+mov    rdi,rax
+call   1130 <free@plt>
+nop
+leave  
+ret

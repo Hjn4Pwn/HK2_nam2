@@ -1,0 +1,55 @@
+push   r14
+push   rbx
+sub    rsp,0x68
+xor    edi,edi
+call   1080 <time@plt>
+mov    edi,eax
+call   1060 <srand@plt>
+lea    rdi,[rip+0xf5d]        
+call   1030 <puts@plt>
+mov    rdi,rsp
+mov    esi,0x64
+call   11d0 <tgetinput>
+cmp    eax,0xfffffffd
+je     1382 <play+0xc2>
+call   10c0 <rand@plt>
+movsxd rbx,eax
+imul   rax,rbx,0x55555556
+mov    rcx,rax
+shr    rcx,0x3f
+shr    rax,0x20
+add    eax,ecx
+lea    eax,[rax+rax*2]
+sub    ebx,eax
+lea    rdi,[rip+0xcf9]        
+mov    r14,rsp
+mov    rsi,r14
+xor    eax,eax
+call   1040 <printf@plt>
+movsxd rbx,ebx
+lea    rax,[rip+0x2d4a]        
+mov    rsi,QWORD PTR [rax+rbx*8]
+lea    rdi,[rip+0xce7]        
+xor    eax,eax
+call   1040 <printf@plt>
+lea    rax,[rip+0x2d51]        
+mov    rsi,QWORD PTR [rax+rbx*8]
+mov    rdi,r14
+call   10b0 <strstr@plt>
+test   rax,rax
+setne  bl
+lea    rax,[rip+0xcee]        
+lea    rdi,[rip+0xcd2]        
+cmove  rdi,rax
+call   1030 <puts@plt>
+mov    eax,ebx
+add    rsp,0x68
+pop    rbx
+pop    r14
+ret    
+lea    rdi,[rip+0xee2]        
+call   1030 <puts@plt>
+xor    edi,edi
+call   10a0 <exit@plt>
+cs nop WORD PTR [rax+rax*1+0x0]
+nop

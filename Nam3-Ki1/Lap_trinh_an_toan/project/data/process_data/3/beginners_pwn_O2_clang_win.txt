@@ -1,0 +1,3 @@
+lea    rdi,[rip+0xe3d]        
+jmp    1060 <system@plt>
+nop    DWORD PTR [rax+0x0]

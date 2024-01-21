@@ -1,0 +1,30 @@
+push typeone
+lea typeone typethree
+call typesix
+lea typeone typethree
+lea typeone typethree
+call typesix
+test typeone typeone
+je typeseven
+mov typeone typeone
+nop typefour
+mov typeone typeone
+call typesix
+shl typeone typefive
+cmp typeone typefive
+je typeseven
+sar typeone typefive
+mov typeone typeone
+call typesix
+jmp typeseven
+mov typeone typefive
+call typesix
+mov typeone typeone
+pop typeone
+jmp typeseven
+lea typeone typethree
+call typesix
+xor typeone typeone
+call typesix
+cs typefour
+xchg typeeight typeeight

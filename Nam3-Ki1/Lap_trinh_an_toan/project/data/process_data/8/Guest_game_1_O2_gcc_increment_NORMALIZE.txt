@@ -1,0 +1,4 @@
+endbr64
+lea typeone typethree
+ret
+nop typethree

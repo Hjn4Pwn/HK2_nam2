@@ -1,0 +1,9 @@
+endbr64
+push typeone
+mov typeone typeone
+lea typeone typethree
+mov typeone typeone
+call typesix
+nop
+pop typeone
+ret

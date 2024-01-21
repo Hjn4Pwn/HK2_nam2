@@ -1,0 +1,4 @@
+lea    rax,[rdi+0x1]
+ret    
+cs nop WORD PTR [rax+rax*1+0x0]
+nop

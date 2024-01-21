@@ -1,0 +1,43 @@
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x220
+call   11a0 <get_random>
+mov    ecx,0x1000
+cqo    
+idiv   rcx
+add    rdx,0x1
+mov    QWORD PTR [rbp-0x8],rdx
+mov    DWORD PTR [rbp-0xc],0x0
+lea    rdi,[rip+0xe14]        
+mov    al,0x0
+call   1040 <printf@plt>
+lea    rdi,[rbp-0x210]
+mov    rax,QWORD PTR [rip+0x2dd3]        
+mov    rdx,QWORD PTR [rax]
+mov    esi,0x200
+call   1050 <fgets@plt>
+lea    rdi,[rbp-0x210]
+call   1090 <atol@plt>
+mov    QWORD PTR [rbp-0x218],rax
+cmp    QWORD PTR [rbp-0x218],0x0
+jne    1246 <do_stuff+0x86>
+lea    rdi,[rip+0xdf0]        
+mov    al,0x0
+call   1040 <printf@plt>
+jmp    1284 <do_stuff+0xc4>
+mov    rax,QWORD PTR [rbp-0x218]
+cmp    rax,QWORD PTR [rbp-0x8]
+jne    1271 <do_stuff+0xb1>
+lea    rdi,[rip+0xde8]        
+mov    al,0x0
+call   1040 <printf@plt>
+mov    DWORD PTR [rbp-0xc],0x1
+jmp    127f <do_stuff+0xbf>
+lea    rdi,[rip+0xe07]        
+mov    al,0x0
+call   1040 <printf@plt>
+jmp    1284 <do_stuff+0xc4>
+mov    eax,DWORD PTR [rbp-0xc]
+add    rsp,0x220
+pop    rbp
+ret

@@ -1,0 +1,13 @@
+push typeone
+mov typeone typeone
+sub typeone typefive
+mov typethree typeone
+mov typeone typethree
+mov typeeight typefive
+call typesix
+mov typeone typethree
+call typesix
+add typeone typefive
+pop typeone
+ret
+cs typefour

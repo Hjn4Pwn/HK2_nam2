@@ -1,0 +1,21 @@
+endbr64
+push typeone
+mov typeone typeone
+mov typethree typeone
+mov typethree typeone
+mov typethree typefive
+mov typethree typefive
+jmp typeseven
+mov typeone typethree
+mov typeone typethree
+add typeone typeone
+movzx typeone typetwo
+movsx typeone typeeight
+add typethree typeone
+add typethree typefive
+mov typeone typethree
+cmp typeone typethree
+jb typeseven
+mov typeone typethree
+pop typeone
+ret

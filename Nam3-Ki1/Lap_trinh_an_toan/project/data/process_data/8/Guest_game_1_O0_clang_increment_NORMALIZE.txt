@@ -1,0 +1,9 @@
+push typeone
+mov typeone typeone
+mov typethree typeone
+mov typeone typethree
+add typeone typefive
+pop typeone
+ret
+cs typefour
+nop typethree

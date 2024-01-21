@@ -1,0 +1,3 @@
+endbr64
+lea typeone typethree
+jmp typeseven

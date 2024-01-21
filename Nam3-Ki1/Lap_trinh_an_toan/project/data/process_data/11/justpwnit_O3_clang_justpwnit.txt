@@ -1,0 +1,15 @@
+push   rbx
+sub    rsp,0x20
+mov    rbx,rsp
+mov    rdi,rbx
+call   11a0 <set_element>
+mov    rdi,rbx
+call   11a0 <set_element>
+mov    rdi,rbx
+call   11a0 <set_element>
+mov    rdi,rbx
+call   11a0 <set_element>
+add    rsp,0x20
+pop    rbx
+ret    
+xchg   ax,ax

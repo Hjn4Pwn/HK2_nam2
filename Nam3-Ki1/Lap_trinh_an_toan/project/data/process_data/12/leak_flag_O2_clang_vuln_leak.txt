@@ -1,0 +1,36 @@
+push   rbx
+sub    rsp,0xc0
+lea    rdi,[rip+0xdc5]        
+lea    rsi,[rip+0xe00]        
+call   10a0 <fopen@plt>
+test   rax,rax
+je     12ad <vuln_leak+0x7d>
+mov    rdi,rsp
+mov    esi,0x40
+mov    rdx,rax
+call   1070 <fgets@plt>
+lea    rdi,[rip+0xdf6]        
+xor    eax,eax
+call   1060 <printf@plt>
+lea    rdi,[rip+0xe17]        
+lea    rbx,[rsp+0x40]
+mov    rsi,rbx
+xor    eax,eax
+call   10b0 <__isoc99_scanf@plt>
+lea    rdi,[rip+0xe07]        
+call   1040 <puts@plt>
+mov    rdi,rbx
+xor    eax,eax
+call   1060 <printf@plt>
+mov    edi,0xa
+call   1030 <putchar@plt>
+add    rsp,0xc0
+pop    rbx
+ret    
+lea    rdi,[rip+0xd59]        
+lea    rsi,[rip+0xd58]        
+lea    rdx,[rip+0xd86]        
+xor    eax,eax
+call   1060 <printf@plt>
+xor    edi,edi
+call   10c0 <exit@plt>

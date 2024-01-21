@@ -1,0 +1,17 @@
+endbr64 
+test   rsi,rsi
+je     1400 <calculate_story_score+0x20>
+add    rsi,rdi
+xor    eax,eax
+xchg   ax,ax
+movsx  edx,BYTE PTR [rdi]
+add    rdi,0x1
+add    eax,edx
+cmp    rdi,rsi
+jne    13f0 <calculate_story_score+0x10>
+ret    
+nop
+xor    eax,eax
+ret    
+data16 cs nop WORD PTR [rax+rax*1+0x0]
+xchg   ax,ax

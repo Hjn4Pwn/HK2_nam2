@@ -1,0 +1,40 @@
+push typeone
+sub typeone typefive
+lea typeone typethree
+call typesix
+mov typeone typethree
+mov typeone typetwo
+mov typeone typeone
+mov typeone typeone
+mov typeone typefive
+call typesix
+mov typeone typeone
+xor typeone typeone
+mov typeone typefive
+call typesix
+mov typeone typethree
+lea typeone typethree
+test typeone typeone
+cmovns typeone typeone
+and typeone typefive
+neg typeone
+add typeone typeone
+add typeone typefive
+cmp typeone typeone
+lea typeone typethree
+lea typeone typethree
+cmove typeone typeone
+sete typeeight
+test typeone typeone
+setne typeeight
+lea typeone typethree
+cmovne typeone typeone
+and typeeight typeeight
+movzx typeone typeeight
+call typesix
+mov typeone typeone
+add typeone typefive
+pop typeone
+ret
+cs typefour
+nop typefour

@@ -1,0 +1,9 @@
+endbr64 
+push   rbp
+mov    rbp,rsp
+lea    rax,[rip+0xd8c]        
+mov    rdi,rax
+call   1120 <system@plt>
+nop
+pop    rbp
+ret

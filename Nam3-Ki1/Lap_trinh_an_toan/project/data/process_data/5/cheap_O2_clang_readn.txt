@@ -1,0 +1,43 @@
+push   r15
+push   r14
+push   r13
+push   r12
+push   rbx
+test   esi,esi
+je     1231 <readn+0x71>
+mov    r14,rdi
+mov    r12d,esi
+xor    r15d,r15d
+mov    r13d,0x1
+mov    rbx,rdi
+nop
+mov    edx,0x1
+xor    edi,edi
+mov    rsi,rbx
+call   1070 <read@plt>
+add    r15d,eax
+cmp    eax,0x1
+jne    1212 <readn+0x52>
+lea    eax,[r15-0x1]
+cmp    BYTE PTR [r14+rax*1],0xa
+je     1212 <readn+0x52>
+add    rbx,0x1
+lea    rax,[r13+0x1]
+cmp    r13,r12
+mov    r13,rax
+jb     11e0 <readn+0x20>
+test   r15d,r15d
+je     1231 <readn+0x71>
+add    r15d,0xffffffff
+cmp    BYTE PTR [r14+r15*1],0xa
+jne    1227 <readn+0x67>
+mov    BYTE PTR [r14+r15*1],0x0
+pop    rbx
+pop    r12
+pop    r13
+pop    r14
+pop    r15
+ret    
+mov    edi,0xffffffff
+call   10b0 <exit@plt>
+nop    DWORD PTR [rax+rax*1+0x0]

@@ -1,0 +1,16 @@
+push   rbx
+sub    rsp,0x100
+lea    rdi,[rip+0xe65]        
+lea    rsi,[rip+0xe67]        
+call   1070 <fopen@plt>
+mov    rbx,rsp
+mov    rdi,rbx
+mov    esi,0x100
+mov    rdx,rax
+call   1040 <fgets@plt>
+mov    rdi,rbx
+call   1030 <puts@plt>
+add    rsp,0x100
+pop    rbx
+ret    
+nop

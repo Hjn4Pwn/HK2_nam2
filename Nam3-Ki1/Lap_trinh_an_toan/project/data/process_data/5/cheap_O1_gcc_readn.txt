@@ -1,0 +1,47 @@
+endbr64 
+push   r13
+push   r12
+push   rbp
+push   rbx
+sub    rsp,0x8
+test   esi,esi
+je     12bf <readn+0x56>
+mov    r12,rdi
+mov    rbx,rdi
+lea    eax,[rsi-0x1]
+lea    r13,[rdi+rax*1+0x1]
+mov    ebp,0x0
+mov    edx,0x1
+mov    rsi,rbx
+mov    edi,0x0
+call   1120 <read@plt>
+add    ebp,eax
+cmp    eax,0x1
+jne    12c9 <readn+0x60>
+lea    eax,[rbp-0x1]
+add    rax,r12
+cmp    BYTE PTR [rax],0xa
+je     12e3 <readn+0x7a>
+add    rbx,0x1
+cmp    r13,rbx
+jne    128e <readn+0x25>
+test   ebp,ebp
+jne    12d8 <readn+0x6f>
+mov    edi,0xffffffff
+call   1170 <exit@plt>
+test   ebp,ebp
+je     12bf <readn+0x56>
+lea    eax,[rbp-0x1]
+add    rax,r12
+cmp    BYTE PTR [rax],0xa
+je     12e7 <readn+0x7e>
+add    rsp,0x8
+pop    rbx
+pop    rbp
+pop    r12
+pop    r13
+ret    
+test   ebp,ebp
+je     12bf <readn+0x56>
+mov    BYTE PTR [rax],0x0
+jmp    12d8 <readn+0x6f>

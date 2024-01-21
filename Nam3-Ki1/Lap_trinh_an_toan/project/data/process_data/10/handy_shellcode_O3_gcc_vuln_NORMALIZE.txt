@@ -1,0 +1,8 @@
+endbr64
+push typeone
+xor typeone typeone
+mov typeone typeone
+call typesix
+mov typeone typeone
+pop typeone
+jmp typeseven

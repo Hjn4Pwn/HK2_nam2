@@ -1,0 +1,20 @@
+sub typeone typefive
+lea typeone typethree
+xor typeone typeone
+call typesix
+xorps typeeight typeeight
+movaps typethree typeeight
+movaps typethree typeeight
+movaps typethree typeeight
+movaps typethree typeeight
+movaps typethree typeeight
+movaps typethree typeeight
+movaps typethree typeeight
+movaps typetwo typeeight
+mov typeone typeone
+xor typeone typeone
+call typesix
+add typeone typefive
+ret
+cs typefour
+nop typefour

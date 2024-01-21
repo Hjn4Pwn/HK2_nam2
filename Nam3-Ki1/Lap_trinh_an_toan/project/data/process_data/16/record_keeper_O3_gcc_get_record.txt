@@ -1,0 +1,26 @@
+endbr64 
+sub    rsp,0x98
+mov    edi,0x1
+lea    rsi,[rip+0xe3d]        
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rsp+0x88],rax
+xor    eax,eax
+call   1090 <__printf_chk@plt>
+pxor   xmm0,xmm0
+xor    eax,eax
+mov    rdi,rsp
+movaps XMMWORD PTR [rsp],xmm0
+movaps XMMWORD PTR [rsp+0x10],xmm0
+movaps XMMWORD PTR [rsp+0x20],xmm0
+movaps XMMWORD PTR [rsp+0x30],xmm0
+movaps XMMWORD PTR [rsp+0x40],xmm0
+movaps XMMWORD PTR [rsp+0x50],xmm0
+movaps XMMWORD PTR [rsp+0x60],xmm0
+movaps XMMWORD PTR [rsp+0x70],xmm0
+call   1080 <gets@plt>
+mov    rax,QWORD PTR [rsp+0x88]
+sub    rax,QWORD PTR fs
+jne    122f <get_record+0x7f>
+add    rsp,0x98
+ret    
+call   1070 <__stack_chk_fail@plt>

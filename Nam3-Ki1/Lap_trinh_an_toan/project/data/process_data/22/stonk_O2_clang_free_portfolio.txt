@@ -1,0 +1,17 @@
+push   r14
+push   rbx
+push   rax
+mov    r14,rdi
+mov    rdi,QWORD PTR [rdi+0x8]
+test   rdi,rdi
+je     1561 <free_portfolio+0x21>
+mov    rbx,QWORD PTR [rdi+0x10]
+call   1030 <free@plt>
+mov    rdi,rbx
+test   rbx,rbx
+jne    1550 <free_portfolio+0x10>
+mov    rdi,r14
+add    rsp,0x8
+pop    rbx
+pop    r14
+jmp    1030 <free@plt>

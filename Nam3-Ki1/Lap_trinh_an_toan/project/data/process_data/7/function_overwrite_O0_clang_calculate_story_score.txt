@@ -1,0 +1,23 @@
+push   rbp
+mov    rbp,rsp
+mov    QWORD PTR [rbp-0x8],rdi
+mov    QWORD PTR [rbp-0x10],rsi
+mov    DWORD PTR [rbp-0x14],0x0
+mov    QWORD PTR [rbp-0x20],0x0
+mov    rax,QWORD PTR [rbp-0x20]
+cmp    rax,QWORD PTR [rbp-0x10]
+jae    121c <calculate_story_score+0x4c>
+mov    rax,QWORD PTR [rbp-0x8]
+mov    rcx,QWORD PTR [rbp-0x20]
+movsx  eax,BYTE PTR [rax+rcx*1]
+add    eax,DWORD PTR [rbp-0x14]
+mov    DWORD PTR [rbp-0x14],eax
+mov    rax,QWORD PTR [rbp-0x20]
+add    rax,0x1
+mov    QWORD PTR [rbp-0x20],rax
+jmp    11eb <calculate_story_score+0x1b>
+mov    eax,DWORD PTR [rbp-0x14]
+pop    rbp
+ret    
+cs nop WORD PTR [rax+rax*1+0x0]
+nop    DWORD PTR [rax+rax*1+0x0]

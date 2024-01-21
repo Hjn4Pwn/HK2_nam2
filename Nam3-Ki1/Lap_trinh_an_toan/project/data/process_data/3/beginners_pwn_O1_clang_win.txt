@@ -1,0 +1,6 @@
+push   rax
+lea    rdi,[rip+0xe3c]        
+call   1060 <system@plt>
+pop    rax
+ret    
+nop

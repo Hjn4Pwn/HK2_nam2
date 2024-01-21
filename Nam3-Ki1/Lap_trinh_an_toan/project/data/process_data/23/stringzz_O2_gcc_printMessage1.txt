@@ -1,0 +1,14 @@
+endbr64 
+push   rbp
+mov    rbp,rdi
+lea    rdi,[rip+0xcd3]        
+call   10c0 <puts@plt>
+lea    rdi,[rip+0xcbb]        
+call   10c0 <puts@plt>
+lea    rdi,[rip+0xc9d]        
+call   10c0 <puts@plt>
+mov    rsi,rbp
+mov    edi,0x1
+xor    eax,eax
+pop    rbp
+jmp    1110 <__printf_chk@plt>

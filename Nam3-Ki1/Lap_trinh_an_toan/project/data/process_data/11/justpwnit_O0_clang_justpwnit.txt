@@ -1,0 +1,16 @@
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x30
+mov    DWORD PTR [rbp-0x24],0x0
+cmp    DWORD PTR [rbp-0x24],0x4
+jge    1290 <justpwnit+0x30>
+lea    rdi,[rbp-0x20]
+call   11a0 <set_element>
+mov    eax,DWORD PTR [rbp-0x24]
+add    eax,0x1
+mov    DWORD PTR [rbp-0x24],eax
+jmp    126f <justpwnit+0xf>
+add    rsp,0x30
+pop    rbp
+ret    
+cs nop WORD PTR [rax+rax*1+0x0]

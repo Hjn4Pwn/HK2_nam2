@@ -1,0 +1,6 @@
+endbr64
+sub typeone typefive
+lea typeone typethree
+call typesix
+add typeone typefive
+ret

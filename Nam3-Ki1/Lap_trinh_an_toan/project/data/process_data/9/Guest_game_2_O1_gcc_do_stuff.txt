@@ -1,0 +1,47 @@
+endbr64 
+push   rbx
+sub    rsp,0x210
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rsp+0x208],rax
+xor    eax,eax
+lea    rdi,[rip+0xd83]        
+call   10d0 <puts@plt>
+mov    rbx,rsp
+mov    rdx,QWORD PTR [rip+0x2d8c]        
+mov    esi,0x200
+mov    rdi,rbx
+call   1100 <fgets@plt>
+mov    edx,0xa
+mov    esi,0x0
+mov    rdi,rbx
+call   1110 <strtol@plt>
+test   rax,rax
+je     130c <do_stuff+0xad>
+mov    rdx,QWORD PTR [rip+0x2d39]        
+mov    rcx,rdx
+sar    rcx,0x3f
+shr    rcx,0x34
+add    rdx,rcx
+and    edx,0xfff
+sub    rdx,rcx
+add    rdx,0x1
+cmp    rax,rdx
+je     131f <do_stuff+0xc0>
+lea    rdi,[rip+0xd9d]        
+call   10d0 <puts@plt>
+mov    eax,0x0
+mov    rdx,QWORD PTR [rsp+0x208]
+sub    rdx,QWORD PTR fs
+jne    1332 <do_stuff+0xd3>
+add    rsp,0x210
+pop    rbx
+ret    
+lea    rdi,[rip+0xd55]        
+call   10d0 <puts@plt>
+mov    eax,0x0
+jmp    12f0 <do_stuff+0x91>
+lea    rdi,[rip+0xd0a]        
+call   10d0 <puts@plt>
+mov    eax,0x1
+jmp    12f0 <do_stuff+0x91>
+call   10e0 <__stack_chk_fail@plt>

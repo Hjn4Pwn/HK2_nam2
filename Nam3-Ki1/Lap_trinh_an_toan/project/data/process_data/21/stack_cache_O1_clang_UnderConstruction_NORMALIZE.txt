@@ -1,0 +1,16 @@
+push typeone
+lea typeone typethree
+xor typeone typeone
+call typesix
+lea typeone typethree
+xor typeone typeone
+call typesix
+lea typeone typethree
+xor typeone typeone
+call typesix
+mov typeone typethree
+mov typeone typetwo
+call typesix
+pop typeone
+ret
+nop typethree

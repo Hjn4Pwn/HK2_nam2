@@ -1,0 +1,21 @@
+endbr64 
+push   rbp
+mov    rbp,rsp
+mov    QWORD PTR [rbp-0x18],rdi
+mov    QWORD PTR [rbp-0x20],rsi
+mov    DWORD PTR [rbp-0xc],0x0
+mov    QWORD PTR [rbp-0x8],0x0
+jmp    12c3 <calculate_story_score+0x3a>
+mov    rdx,QWORD PTR [rbp-0x18]
+mov    rax,QWORD PTR [rbp-0x8]
+add    rax,rdx
+movzx  eax,BYTE PTR [rax]
+movsx  eax,al
+add    DWORD PTR [rbp-0xc],eax
+add    QWORD PTR [rbp-0x8],0x1
+mov    rax,QWORD PTR [rbp-0x8]
+cmp    rax,QWORD PTR [rbp-0x20]
+jb     12aa <calculate_story_score+0x21>
+mov    eax,DWORD PTR [rbp-0xc]
+pop    rbp
+ret

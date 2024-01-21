@@ -1,0 +1,17 @@
+endbr64
+test typeone typeone
+je typeseven
+add typeone typeone
+xor typeone typeone
+xchg typeeight typeeight
+movsx typeone typetwo
+add typeone typefive
+add typeone typeone
+cmp typeone typeone
+jne typeseven
+ret
+nop
+xor typeone typeone
+ret
+data16 typefour
+xchg typeeight typeeight

@@ -1,0 +1,8 @@
+sub    rsp,0x48
+mov    rdi,rsp
+xor    eax,eax
+call   1070 <gets@plt>
+add    rsp,0x48
+ret    
+cs nop WORD PTR [rax+rax*1+0x0]
+nop    DWORD PTR [rax]

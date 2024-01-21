@@ -1,0 +1,286 @@
+
+./data/process_data_1/25/x-sixty-what_O3_gcc:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000001000 <_init>:
+    1000:	endbr64 
+    1004:	sub    rsp,0x8
+    1008:	mov    rax,QWORD PTR [rip+0x2fd9]        # 3fe8 <__gmon_start__@Base>
+    100f:	test   rax,rax
+    1012:	je     1016 <_init+0x16>
+    1014:	call   rax
+    1016:	add    rsp,0x8
+    101a:	ret    
+
+Disassembly of section .plt:
+
+0000000000001020 <.plt>:
+    1020:	push   QWORD PTR [rip+0x2f52]        # 3f78 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1026:	bnd jmp QWORD PTR [rip+0x2f53]        # 3f80 <_GLOBAL_OFFSET_TABLE_+0x10>
+    102d:	nop    DWORD PTR [rax]
+    1030:	endbr64 
+    1034:	push   0x0
+    1039:	bnd jmp 1020 <_init+0x20>
+    103f:	nop
+    1040:	endbr64 
+    1044:	push   0x1
+    1049:	bnd jmp 1020 <_init+0x20>
+    104f:	nop
+    1050:	endbr64 
+    1054:	push   0x2
+    1059:	bnd jmp 1020 <_init+0x20>
+    105f:	nop
+    1060:	endbr64 
+    1064:	push   0x3
+    1069:	bnd jmp 1020 <_init+0x20>
+    106f:	nop
+    1070:	endbr64 
+    1074:	push   0x4
+    1079:	bnd jmp 1020 <_init+0x20>
+    107f:	nop
+    1080:	endbr64 
+    1084:	push   0x5
+    1089:	bnd jmp 1020 <_init+0x20>
+    108f:	nop
+    1090:	endbr64 
+    1094:	push   0x6
+    1099:	bnd jmp 1020 <_init+0x20>
+    109f:	nop
+    10a0:	endbr64 
+    10a4:	push   0x7
+    10a9:	bnd jmp 1020 <_init+0x20>
+    10af:	nop
+    10b0:	endbr64 
+    10b4:	push   0x8
+    10b9:	bnd jmp 1020 <_init+0x20>
+    10bf:	nop
+    10c0:	endbr64 
+    10c4:	push   0x9
+    10c9:	bnd jmp 1020 <_init+0x20>
+    10cf:	nop
+
+Disassembly of section .plt.got:
+
+00000000000010d0 <__cxa_finalize@plt>:
+    10d0:	endbr64 
+    10d4:	bnd jmp QWORD PTR [rip+0x2f1d]        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+    10db:	nop    DWORD PTR [rax+rax*1+0x0]
+
+Disassembly of section .plt.sec:
+
+00000000000010e0 <puts@plt>:
+    10e0:	endbr64 
+    10e4:	bnd jmp QWORD PTR [rip+0x2e9d]        # 3f88 <puts@GLIBC_2.2.5>
+    10eb:	nop    DWORD PTR [rax+rax*1+0x0]
+
+00000000000010f0 <__stack_chk_fail@plt>:
+    10f0:	endbr64 
+    10f4:	bnd jmp QWORD PTR [rip+0x2e95]        # 3f90 <__stack_chk_fail@GLIBC_2.4>
+    10fb:	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001100 <setresgid@plt>:
+    1100:	endbr64 
+    1104:	bnd jmp QWORD PTR [rip+0x2e8d]        # 3f98 <setresgid@GLIBC_2.2.5>
+    110b:	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001110 <fgets@plt>:
+    1110:	endbr64 
+    1114:	bnd jmp QWORD PTR [rip+0x2e85]        # 3fa0 <fgets@GLIBC_2.2.5>
+    111b:	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001120 <gets@plt>:
+    1120:	endbr64 
+    1124:	bnd jmp QWORD PTR [rip+0x2e7d]        # 3fa8 <gets@GLIBC_2.2.5>
+    112b:	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001130 <getegid@plt>:
+    1130:	endbr64 
+    1134:	bnd jmp QWORD PTR [rip+0x2e75]        # 3fb0 <getegid@GLIBC_2.2.5>
+    113b:	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001140 <__printf_chk@plt>:
+    1140:	endbr64 
+    1144:	bnd jmp QWORD PTR [rip+0x2e6d]        # 3fb8 <__printf_chk@GLIBC_2.3.4>
+    114b:	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001150 <setvbuf@plt>:
+    1150:	endbr64 
+    1154:	bnd jmp QWORD PTR [rip+0x2e65]        # 3fc0 <setvbuf@GLIBC_2.2.5>
+    115b:	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001160 <fopen@plt>:
+    1160:	endbr64 
+    1164:	bnd jmp QWORD PTR [rip+0x2e5d]        # 3fc8 <fopen@GLIBC_2.2.5>
+    116b:	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001170 <exit@plt>:
+    1170:	endbr64 
+    1174:	bnd jmp QWORD PTR [rip+0x2e55]        # 3fd0 <exit@GLIBC_2.2.5>
+    117b:	nop    DWORD PTR [rax+rax*1+0x0]
+
+Disassembly of section .text:
+
+0000000000001180 <main>:
+    1180:	endbr64 
+    1184:	sub    rsp,0x58
+    1188:	mov    rdi,QWORD PTR [rip+0x2e81]        # 4010 <stdout@GLIBC_2.2.5>
+    118f:	xor    ecx,ecx
+    1191:	xor    esi,esi
+    1193:	mov    rax,QWORD PTR fs:0x28
+    119c:	mov    QWORD PTR [rsp+0x48],rax
+    11a1:	xor    eax,eax
+    11a3:	mov    edx,0x2
+    11a8:	call   1150 <setvbuf@plt>
+    11ad:	call   1130 <getegid@plt>
+    11b2:	mov    edi,eax
+    11b4:	mov    edx,eax
+    11b6:	mov    esi,eax
+    11b8:	xor    eax,eax
+    11ba:	call   1100 <setresgid@plt>
+    11bf:	lea    rdi,[rip+0xea2]        # 2068 <_IO_stdin_used+0x68>
+    11c6:	call   10e0 <puts@plt>
+    11cb:	xor    eax,eax
+    11cd:	mov    rdi,rsp
+    11d0:	call   1120 <gets@plt>
+    11d5:	mov    rax,QWORD PTR [rsp+0x48]
+    11da:	sub    rax,QWORD PTR fs:0x28
+    11e3:	jne    11ec <main+0x6c>
+    11e5:	xor    eax,eax
+    11e7:	add    rsp,0x58
+    11eb:	ret    
+    11ec:	call   10f0 <__stack_chk_fail@plt>
+    11f1:	cs nop WORD PTR [rax+rax*1+0x0]
+    11fb:	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001200 <_start>:
+    1200:	endbr64 
+    1204:	xor    ebp,ebp
+    1206:	mov    r9,rdx
+    1209:	pop    rsi
+    120a:	mov    rdx,rsp
+    120d:	and    rsp,0xfffffffffffffff0
+    1211:	push   rax
+    1212:	push   rsp
+    1213:	xor    r8d,r8d
+    1216:	xor    ecx,ecx
+    1218:	lea    rdi,[rip+0xffffffffffffff61]        # 1180 <main>
+    121f:	call   QWORD PTR [rip+0x2db3]        # 3fd8 <__libc_start_main@GLIBC_2.34>
+    1225:	hlt    
+    1226:	cs nop WORD PTR [rax+rax*1+0x0]
+
+0000000000001230 <deregister_tm_clones>:
+    1230:	lea    rdi,[rip+0x2dd9]        # 4010 <stdout@GLIBC_2.2.5>
+    1237:	lea    rax,[rip+0x2dd2]        # 4010 <stdout@GLIBC_2.2.5>
+    123e:	cmp    rax,rdi
+    1241:	je     1258 <deregister_tm_clones+0x28>
+    1243:	mov    rax,QWORD PTR [rip+0x2d96]        # 3fe0 <_ITM_deregisterTMCloneTable@Base>
+    124a:	test   rax,rax
+    124d:	je     1258 <deregister_tm_clones+0x28>
+    124f:	jmp    rax
+    1251:	nop    DWORD PTR [rax+0x0]
+    1258:	ret    
+    1259:	nop    DWORD PTR [rax+0x0]
+
+0000000000001260 <register_tm_clones>:
+    1260:	lea    rdi,[rip+0x2da9]        # 4010 <stdout@GLIBC_2.2.5>
+    1267:	lea    rsi,[rip+0x2da2]        # 4010 <stdout@GLIBC_2.2.5>
+    126e:	sub    rsi,rdi
+    1271:	mov    rax,rsi
+    1274:	shr    rsi,0x3f
+    1278:	sar    rax,0x3
+    127c:	add    rsi,rax
+    127f:	sar    rsi,1
+    1282:	je     1298 <register_tm_clones+0x38>
+    1284:	mov    rax,QWORD PTR [rip+0x2d65]        # 3ff0 <_ITM_registerTMCloneTable@Base>
+    128b:	test   rax,rax
+    128e:	je     1298 <register_tm_clones+0x38>
+    1290:	jmp    rax
+    1292:	nop    WORD PTR [rax+rax*1+0x0]
+    1298:	ret    
+    1299:	nop    DWORD PTR [rax+0x0]
+
+00000000000012a0 <__do_global_dtors_aux>:
+    12a0:	endbr64 
+    12a4:	cmp    BYTE PTR [rip+0x2d6d],0x0        # 4018 <completed.0>
+    12ab:	jne    12d8 <__do_global_dtors_aux+0x38>
+    12ad:	push   rbp
+    12ae:	cmp    QWORD PTR [rip+0x2d42],0x0        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+    12b6:	mov    rbp,rsp
+    12b9:	je     12c7 <__do_global_dtors_aux+0x27>
+    12bb:	mov    rdi,QWORD PTR [rip+0x2d46]        # 4008 <__dso_handle>
+    12c2:	call   10d0 <__cxa_finalize@plt>
+    12c7:	call   1230 <deregister_tm_clones>
+    12cc:	mov    BYTE PTR [rip+0x2d45],0x1        # 4018 <completed.0>
+    12d3:	pop    rbp
+    12d4:	ret    
+    12d5:	nop    DWORD PTR [rax]
+    12d8:	ret    
+    12d9:	nop    DWORD PTR [rax+0x0]
+
+00000000000012e0 <frame_dummy>:
+    12e0:	endbr64 
+    12e4:	jmp    1260 <register_tm_clones>
+    12e9:	nop    DWORD PTR [rax+0x0]
+
+00000000000012f0 <flag>:
+    12f0:	endbr64 
+    12f4:	push   rbp
+    12f5:	lea    rsi,[rip+0xd08]        # 2004 <_IO_stdin_used+0x4>
+    12fc:	lea    rdi,[rip+0xd03]        # 2006 <_IO_stdin_used+0x6>
+    1303:	sub    rsp,0x50
+    1307:	mov    rax,QWORD PTR fs:0x28
+    1310:	mov    QWORD PTR [rsp+0x48],rax
+    1315:	xor    eax,eax
+    1317:	call   1160 <fopen@plt>
+    131c:	test   rax,rax
+    131f:	je     1359 <flag+0x69>
+    1321:	mov    rbp,rsp
+    1324:	mov    esi,0x40
+    1329:	mov    rdx,rax
+    132c:	mov    rdi,rbp
+    132f:	call   1110 <fgets@plt>
+    1334:	xor    eax,eax
+    1336:	mov    rsi,rbp
+    1339:	mov    edi,0x1
+    133e:	call   1140 <__printf_chk@plt>
+    1343:	mov    rax,QWORD PTR [rsp+0x48]
+    1348:	sub    rax,QWORD PTR fs:0x28
+    1351:	jne    1381 <flag+0x91>
+    1353:	add    rsp,0x50
+    1357:	pop    rbp
+    1358:	ret    
+    1359:	mov    edi,0x1
+    135e:	lea    rcx,[rip+0xcaa]        # 200f <_IO_stdin_used+0xf>
+    1365:	lea    rdx,[rip+0xcc4]        # 2030 <_IO_stdin_used+0x30>
+    136c:	xor    eax,eax
+    136e:	lea    rsi,[rip+0xcaf]        # 2024 <_IO_stdin_used+0x24>
+    1375:	call   1140 <__printf_chk@plt>
+    137a:	xor    edi,edi
+    137c:	call   1170 <exit@plt>
+    1381:	call   10f0 <__stack_chk_fail@plt>
+    1386:	cs nop WORD PTR [rax+rax*1+0x0]
+
+0000000000001390 <vuln_60>:
+    1390:	endbr64 
+    1394:	sub    rsp,0x58
+    1398:	mov    rax,QWORD PTR fs:0x28
+    13a1:	mov    QWORD PTR [rsp+0x48],rax
+    13a6:	xor    eax,eax
+    13a8:	mov    rdi,rsp
+    13ab:	call   1120 <gets@plt>
+    13b0:	mov    rax,QWORD PTR [rsp+0x48]
+    13b5:	sub    rax,QWORD PTR fs:0x28
+    13be:	jne    13c5 <vuln_60+0x35>
+    13c0:	add    rsp,0x58
+    13c4:	ret    
+    13c5:	call   10f0 <__stack_chk_fail@plt>
+
+Disassembly of section .fini:
+
+00000000000013cc <_fini>:
+    13cc:	endbr64 
+    13d0:	sub    rsp,0x8
+    13d4:	add    rsp,0x8
+    13d8:	ret    

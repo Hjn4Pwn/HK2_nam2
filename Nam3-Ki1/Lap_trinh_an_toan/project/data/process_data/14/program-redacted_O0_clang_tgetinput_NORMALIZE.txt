@@ -1,0 +1,89 @@
+push typeone
+mov typeone typeone
+sub typeone typefive
+mov typethree typeone
+mov typethree typeone
+mov typethree typefive
+mov typethree typefive
+cmp typethree typefive
+ja typeseven
+lea typeone typethree
+mov typeeight typefive
+call typesix
+mov typethree typefive
+jmp typeseven
+jmp typeseven
+lea typeone typethree
+mov typethree typeone
+mov typethree typefive
+mov typeone typethree
+cmp typeone typefive
+jae typeseven
+mov typeone typethree
+mov typeone typethree
+mov typethree typefive
+mov typeone typethree
+add typeone typefive
+mov typethree typeone
+jmp typeseven
+jmp typeseven
+mov typeone typethree
+or typeone typefive
+mov typethree typeone
+mov typethree typefive
+mov typethree typefive
+mov typeone typefive
+lea typeone typethree
+xor typeone typeone
+mov typeone typeone
+lea typeone typethree
+mov typeone typeone
+call typesix
+mov typethree typeone
+cmp typethree typefive
+jne typeseven
+lea typeone typethree
+mov typeeight typefive
+call typesix
+mov typethree typefive
+jmp typeseven
+cmp typethree typefive
+je typeseven
+mov typeone typethree
+mov typeone typethree
+sub typeone typefive
+mov typeone typeone
+mov typeone typeone
+xor typeone typeone
+call typesix
+mov typethree typeone
+mov typeone typethree
+mov typeone typethree
+sub typeone typefive
+movsxd typeone typeone
+movsx typeone typethree
+cmp typeone typefive
+jne typeseven
+mov typeone typethree
+add typeone typefive
+mov typethree typeone
+mov typeone typethree
+movsxd typeone typethree
+mov typethree typefive
+cmp typethree typefive
+jne typeseven
+lea typeone typethree
+mov typeeight typefive
+call typesix
+mov typethree typefive
+jmp typeseven
+mov typethree typefive
+jmp typeseven
+lea typeone typethree
+mov typeeight typefive
+call typesix
+mov typethree typefive
+mov typeone typethree
+add typeone typefive
+pop typeone
+ret

@@ -1,0 +1,19 @@
+endbr64 
+push   rbp
+push   rbx
+sub    rsp,0x8
+mov    rbp,rdi
+mov    rbx,QWORD PTR [rdi+0x8]
+test   rbx,rbx
+je     15ff <free_portfolio+0x27>
+mov    rdi,rbx
+mov    rbx,QWORD PTR [rbx+0x10]
+call   1130 <free@plt>
+test   rbx,rbx
+jne    15ee <free_portfolio+0x16>
+mov    rdi,rbp
+call   1130 <free@plt>
+add    rsp,0x8
+pop    rbx
+pop    rbp
+ret

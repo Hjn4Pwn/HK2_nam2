@@ -1,0 +1,33 @@
+endbr64 
+push   rbp
+mov    esi,0x40
+sub    rsp,0xd0
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rsp+0xc8],rax
+xor    eax,eax
+mov    rdi,rsp
+lea    rbp,[rsp+0x40]
+call   12d0 <readflag>
+lea    rsi,[rip+0xd08]        
+mov    edi,0x1
+xor    eax,eax
+call   1150 <__printf_chk@plt>
+mov    rsi,rbp
+lea    rdi,[rip+0xc9c]        
+xor    eax,eax
+call   1180 <__isoc99_scanf@plt>
+lea    rdi,[rip+0xc94]        
+call   1100 <puts@plt>
+mov    edi,0x1
+xor    eax,eax
+mov    rsi,rbp
+call   1150 <__printf_chk@plt>
+mov    edi,0xa
+call   10f0 <putchar@plt>
+mov    rax,QWORD PTR [rsp+0xc8]
+sub    rax,QWORD PTR fs
+jne    13d6 <vuln_leak+0x96>
+add    rsp,0xd0
+pop    rbp
+ret    
+call   1110 <__stack_chk_fail@plt>

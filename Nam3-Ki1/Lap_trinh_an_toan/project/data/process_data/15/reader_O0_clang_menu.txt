@@ -1,0 +1,24 @@
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x10
+lea    rdi,[rip+0xe65]        
+call   1040 <puts@plt>
+lea    rdi,[rip+0xe6b]        
+call   1040 <puts@plt>
+lea    rdi,[rip+0xe67]        
+call   1040 <puts@plt>
+lea    rdi,[rip+0xe63]        
+call   1040 <puts@plt>
+lea    rdi,[rip+0xe5f]        
+call   1040 <puts@plt>
+lea    rdi,[rip+0xe6e]        
+lea    rsi,[rbp-0x4]
+mov    al,0x0
+call   1080 <__isoc99_scanf@plt>
+call   1070 <getchar@plt>
+lea    rdi,[rip+0xeb8]        
+call   1040 <puts@plt>
+mov    eax,DWORD PTR [rbp-0x4]
+add    rsp,0x10
+pop    rbp
+ret

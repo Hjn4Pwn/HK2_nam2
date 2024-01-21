@@ -1,0 +1,9 @@
+push typeone
+mov typeone typeone
+xor typeone typeone
+call typesix
+mov typeone typeone
+pop typeone
+jmp typeseven
+cs typefour
+xchg typeeight typeeight

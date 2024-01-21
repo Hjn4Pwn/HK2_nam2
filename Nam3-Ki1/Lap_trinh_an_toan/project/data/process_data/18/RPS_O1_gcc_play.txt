@@ -1,0 +1,65 @@
+endbr64 
+push   rbp
+push   rbx
+sub    rsp,0x78
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rsp+0x68],rax
+xor    eax,eax
+mov    edi,0x0
+call   1140 <time@plt>
+mov    edi,eax
+call   1120 <srand@plt>
+lea    rdi,[rip+0xc8f]        
+call   10f0 <puts@plt>
+mov    rdi,rsp
+mov    esi,0x64
+call   1289 <tgetinput>
+cmp    eax,0xfffffffd
+je     14a1 <play+0xea>
+call   1190 <rand@plt>
+movsxd rbx,eax
+imul   rbx,rbx,0x55555556
+shr    rbx,0x20
+cdq    
+sub    ebx,edx
+lea    edx,[rbx+rbx*2]
+sub    eax,edx
+mov    ebx,eax
+mov    rbp,rsp
+mov    rdx,rbp
+lea    rsi,[rip+0xd6e]        
+mov    edi,0x1
+mov    eax,0x0
+call   1160 <__printf_chk@plt>
+movsxd rbx,ebx
+lea    rax,[rip+0x2be9]        
+mov    rdx,QWORD PTR [rax+rbx*8]
+lea    rsi,[rip+0xd5a]        
+mov    edi,0x1
+mov    eax,0x0
+call   1160 <__printf_chk@plt>
+lea    rax,[rip+0x2ba8]        
+mov    rsi,QWORD PTR [rax+rbx*8]
+mov    rdi,rbp
+call   1180 <strstr@plt>
+test   rax,rax
+je     14b7 <play+0x100>
+lea    rdi,[rip+0xd45]        
+call   10f0 <puts@plt>
+mov    eax,0x1
+mov    rdx,QWORD PTR [rsp+0x68]
+sub    rdx,QWORD PTR fs
+jne    14ca <play+0x113>
+add    rsp,0x78
+pop    rbx
+pop    rbp
+ret    
+lea    rdi,[rip+0xceb]        
+call   10f0 <puts@plt>
+mov    edi,0x0
+call   1170 <exit@plt>
+lea    rdi,[rip+0xbf2]        
+call   10f0 <puts@plt>
+mov    eax,0x0
+jmp    148a <play+0xd3>
+call   1100 <__stack_chk_fail@plt>

@@ -1,0 +1,10 @@
+endbr64 
+test   esi,esi
+je     165d <tgetinput+0xd>
+jmp    1560 <tgetinput.part.0>
+sub    rsp,0x8
+lea    rdi,[rip+0xad0]        
+call   10f0 <puts@plt>
+mov    eax,0xfffffffe
+add    rsp,0x8
+ret

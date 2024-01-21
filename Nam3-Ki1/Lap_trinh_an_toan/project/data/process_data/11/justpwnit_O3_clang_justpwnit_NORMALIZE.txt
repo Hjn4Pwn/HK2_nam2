@@ -1,0 +1,15 @@
+push typeone
+sub typeone typefive
+mov typeone typeone
+mov typeone typeone
+call typesix
+mov typeone typeone
+call typesix
+mov typeone typeone
+call typesix
+mov typeone typeone
+call typesix
+add typeone typefive
+pop typeone
+ret
+xchg typeeight typeeight

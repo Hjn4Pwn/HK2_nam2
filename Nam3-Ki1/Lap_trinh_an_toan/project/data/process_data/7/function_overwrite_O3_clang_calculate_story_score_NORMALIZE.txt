@@ -1,0 +1,81 @@
+test typeone typeone
+je typeseven
+cmp typeone typefive
+jae typeseven
+xor typeone typeone
+xor typeone typeone
+jmp typeseven
+xor typeone typeone
+ret
+mov typeone typeone
+and typeone typefive
+lea typeone typethree
+mov typeone typeone
+shr typeone typefive
+add typeone typefive
+test typeone typeone
+je typeseven
+mov typeone typeone
+and typeone typefive
+pxor typeeight typeeight
+xor typeone typeone
+pxor typeeight typeeight
+nop typefour
+movd typeeight typethree
+punpcklbw typeeight typeeight
+punpcklwd typeeight typeeight
+movd typeeight typefour
+punpcklbw typeeight typeeight
+punpcklwd typeeight typeeight
+psrad typeeight typefive
+paddd typeeight typeeight
+psrad typeeight typefive
+paddd typeeight typeeight
+movd typeeight typefour
+punpcklbw typeeight typeeight
+punpcklwd typeeight typeeight
+movd typeeight typefour
+punpcklbw typeeight typeeight
+punpcklwd typeeight typeeight
+psrad typeeight typefive
+paddd typeeight typeeight
+psrad typeeight typefive
+paddd typeeight typeeight
+add typeone typefive
+add typeone typefive
+jne typeseven
+test typeeight typefive
+je typeseven
+movd typeeight typethree
+movd typeeight typefour
+punpcklbw typeeight typeeight
+punpcklwd typeeight typeeight
+psrad typeeight typefive
+paddd typeeight typeeight
+punpcklbw typeeight typeeight
+punpcklwd typeeight typeeight
+psrad typeeight typefive
+paddd typeeight typeeight
+paddd typeeight typeeight
+pshufd typeeight
+paddd typeeight typeeight
+pshufd typeeight
+paddd typeeight typeeight
+movd typeone typeeight
+cmp typeone typeone
+je typeseven
+nop typefour
+movsx typeone typethree
+add typeone typeone
+add typeone typefive
+cmp typeone typeone
+jne typeseven
+ret
+pxor typeeight typeeight
+xor typeone typeone
+pxor typeeight typeeight
+test typeeight typefive
+jne typeseven
+jmp typeseven
+cs typefour
+nop typethree

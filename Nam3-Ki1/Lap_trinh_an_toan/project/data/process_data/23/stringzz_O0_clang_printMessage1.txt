@@ -1,0 +1,12 @@
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x10
+mov    QWORD PTR [rbp-0x8],rdi
+lea    rdi,[rip+0xe0f]        
+call   1030 <puts@plt>
+mov    rdi,QWORD PTR [rbp-0x8]
+call   11d0 <printMessage2>
+add    rsp,0x10
+pop    rbp
+ret    
+nop    WORD PTR [rax+rax*1+0x0]

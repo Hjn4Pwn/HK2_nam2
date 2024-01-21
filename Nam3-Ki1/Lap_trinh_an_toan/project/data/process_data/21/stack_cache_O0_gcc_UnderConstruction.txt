@@ -1,0 +1,46 @@
+endbr64 
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x70
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rbp-0x8],rax
+xor    eax,eax
+mov    rdi,QWORD PTR [rbp-0x50]
+mov    rsi,QWORD PTR [rbp-0x58]
+mov    rcx,QWORD PTR [rbp-0x60]
+mov    rdx,QWORD PTR [rbp-0x68]
+mov    rax,QWORD PTR [rbp-0x70]
+sub    rsp,0x8
+push   QWORD PTR [rbp-0x48]
+mov    r9,rdi
+mov    r8,rsi
+mov    rsi,rax
+lea    rax,[rip+0xcfc]        
+mov    rdi,rax
+mov    eax,0x0
+call   1120 <printf@plt>
+add    rsp,0x10
+mov    rcx,QWORD PTR [rbp-0x30]
+mov    rdx,QWORD PTR [rbp-0x38]
+mov    rax,QWORD PTR [rbp-0x40]
+mov    rsi,rax
+lea    rax,[rip+0xcfb]        
+mov    rdi,rax
+mov    eax,0x0
+call   1120 <printf@plt>
+mov    rax,QWORD PTR [rbp-0x28]
+mov    rsi,rax
+lea    rax,[rip+0xcf9]        
+mov    rdi,rax
+mov    eax,0x0
+call   1120 <printf@plt>
+mov    rax,QWORD PTR [rip+0x2c4e]        
+mov    rdi,rax
+call   1150 <fflush@plt>
+nop
+mov    rax,QWORD PTR [rbp-0x8]
+sub    rax,QWORD PTR fs
+je     13df <UnderConstruction+0xb9>
+call   1100 <__stack_chk_fail@plt>
+leave  
+ret

@@ -1,0 +1,18 @@
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x110
+lea    rdi,[rip+0xe62]        
+lea    rsi,[rip+0xe64]        
+call   1070 <fopen@plt>
+mov    QWORD PTR [rbp-0x108],rax
+lea    rdi,[rbp-0x100]
+mov    rdx,QWORD PTR [rbp-0x108]
+mov    esi,0x100
+call   1040 <fgets@plt>
+lea    rdi,[rbp-0x100]
+call   1030 <puts@plt>
+add    rsp,0x110
+pop    rbp
+ret    
+cs nop WORD PTR [rax+rax*1+0x0]
+nop    DWORD PTR [rax+0x0]

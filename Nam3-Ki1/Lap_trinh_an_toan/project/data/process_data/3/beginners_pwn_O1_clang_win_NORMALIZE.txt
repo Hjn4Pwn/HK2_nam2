@@ -1,0 +1,6 @@
+push typeone
+lea typeone typethree
+call typesix
+pop typeone
+ret
+nop

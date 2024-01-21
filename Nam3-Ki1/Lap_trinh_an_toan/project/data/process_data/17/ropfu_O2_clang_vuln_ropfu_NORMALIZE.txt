@@ -1,0 +1,9 @@
+sub typeone typefive
+lea typeone typethree
+call typesix
+mov typeone typeone
+xor typeone typeone
+call typesix
+add typeone typefive
+ret
+nop

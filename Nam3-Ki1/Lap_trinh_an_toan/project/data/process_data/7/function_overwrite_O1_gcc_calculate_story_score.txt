@@ -1,0 +1,15 @@
+endbr64 
+test   rsi,rsi
+je     12ae <calculate_story_score+0x25>
+mov    rax,rdi
+add    rdi,rsi
+mov    edx,0x0
+movsx  ecx,BYTE PTR [rax]
+add    edx,ecx
+add    rax,0x1
+cmp    rax,rdi
+jne    129d <calculate_story_score+0x14>
+mov    eax,edx
+ret    
+mov    edx,0x0
+jmp    12ab <calculate_story_score+0x22>

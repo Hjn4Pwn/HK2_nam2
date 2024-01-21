@@ -1,0 +1,78 @@
+endbr64 
+push   rbp
+mov    rbp,rsp
+push   rbx
+sub    rsp,0x8
+lea    rax,[rip+0x2937]        
+mov    rsi,rax
+lea    rax,[rip+0xa48]        
+mov    rdi,rax
+mov    eax,0x0
+call   1240 <__isoc99_scanf@plt>
+movzx  eax,BYTE PTR [rip+0x2919]        
+movsx  eax,al
+mov    edi,eax
+call   1160 <toupper@plt>
+mov    BYTE PTR [rip+0x2909],al        
+movzx  eax,BYTE PTR [rip+0x2902]        
+movsx  eax,al
+sub    eax,0x45
+cmp    eax,0xe
+ja     1825 <processInput+0x140>
+mov    eax,eax
+lea    rdx,[rax*4+0x0]
+lea    rax,[rip+0xb82]        
+mov    eax,DWORD PTR [rdx+rax*1]
+cdqe   
+lea    rdx,[rip+0xb76]        
+add    rax,rdx
+notrack jmp rax
+mov    rax,QWORD PTR [rip+0x28d1]        
+test   rax,rax
+je     1782 <processInput+0x9d>
+mov    rax,QWORD PTR [rip+0x28c5]        
+lea    rdx,[rip+0xfffffffffffffd8d]        
+mov    QWORD PTR [rax],rdx
+jmp    183e <processInput+0x159>
+lea    rax,[rip+0xad4]        
+mov    rdi,rax
+call   1170 <puts@plt>
+jmp    183e <processInput+0x159>
+mov    rax,QWORD PTR [rip+0x289b]        
+lea    rdx,[rip+0xfffffffffffffd9b]        
+mov    QWORD PTR [rax],rdx
+jmp    183e <processInput+0x159>
+mov    rax,QWORD PTR [rip+0x2885]        
+lea    rdx,[rip+0xfffffffffffffe0a]        
+mov    QWORD PTR [rax],rdx
+jmp    183e <processInput+0x159>
+mov    rax,QWORD PTR [rip+0x2872]        
+lea    rdx,[rip+0xfffffffffffffd8c]        
+mov    QWORD PTR [rax],rdx
+lea    rax,[rip+0xa95]        
+mov    rdi,rax
+call   1170 <puts@plt>
+lea    rax,[rip+0xaa2]        
+mov    rdi,rax
+call   1170 <puts@plt>
+lea    rax,[rip+0xab4]        
+mov    rdi,rax
+call   1170 <puts@plt>
+mov    rbx,QWORD PTR [rip+0x2834]        
+call   13ed <getsline>
+mov    QWORD PTR [rbx+0x8],rax
+jmp    183e <processInput+0x159>
+mov    eax,0x0
+call   1573 <leaveMessage>
+jmp    183e <processInput+0x159>
+mov    edi,0x0
+call   1250 <exit@plt>
+lea    rax,[rip+0xa93]        
+mov    rdi,rax
+call   1170 <puts@plt>
+mov    edi,0x1
+call   1250 <exit@plt>
+nop
+mov    rbx,QWORD PTR [rbp-0x8]
+leave  
+ret

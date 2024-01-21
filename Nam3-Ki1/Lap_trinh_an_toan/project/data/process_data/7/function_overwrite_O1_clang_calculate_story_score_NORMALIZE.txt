@@ -1,0 +1,15 @@
+test typeone typeone
+je typeseven
+xor typeone typeone
+xor typeone typeone
+nop typethree
+movsx typeone typethree
+add typeone typeone
+add typeone typefive
+cmp typeone typeone
+jne typeseven
+ret
+xor typeone typeone
+ret
+cs typefour
+nop typetwo

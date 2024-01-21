@@ -1,0 +1,63 @@
+push   r15
+push   r14
+push   rbx
+sub    rsp,0x90
+test   esi,esi
+je     1249 <tgetinput+0x89>
+mov    r15d,esi
+mov    r14,rdi
+xorps  xmm0,xmm0
+movaps XMMWORD PTR [rsp+0x10],xmm0
+movaps XMMWORD PTR [rsp+0x80],xmm0
+movaps XMMWORD PTR [rsp+0x70],xmm0
+movaps XMMWORD PTR [rsp+0x60],xmm0
+movaps XMMWORD PTR [rsp+0x50],xmm0
+movaps XMMWORD PTR [rsp+0x40],xmm0
+movaps XMMWORD PTR [rsp+0x30],xmm0
+movaps XMMWORD PTR [rsp+0x20],xmm0
+or     BYTE PTR [rsp+0x10],0x1
+mov    QWORD PTR [rsp],0x3c
+mov    QWORD PTR [rsp+0x8],0x0
+lea    rsi,[rsp+0x10]
+mov    r8,rsp
+mov    edi,0x1
+xor    edx,edx
+xor    ecx,ecx
+call   1090 <select@plt>
+mov    ebx,eax
+cmp    eax,0xffffffff
+je     1257 <tgetinput+0x97>
+test   ebx,ebx
+jne    1260 <tgetinput+0xa0>
+mov    ebx,0xfffffffd
+lea    rdi,[rip+0xf88]        
+jmp    129c <tgetinput+0xdc>
+mov    ebx,0xfffffffe
+lea    rdi,[rip+0xfe0]        
+jmp    129c <tgetinput+0xdc>
+lea    rdi,[rip+0xfbd]        
+jmp    129c <tgetinput+0xdc>
+add    r15d,0xffffffff
+xor    ebx,ebx
+xor    edi,edi
+mov    rsi,r14
+mov    rdx,r15
+call   1070 <read@plt>
+lea    ecx,[rax-0x1]
+movsxd rcx,ecx
+cmp    BYTE PTR [r14+rcx*1],0xa
+jne    128c <tgetinput+0xcc>
+cdqe   
+mov    BYTE PTR [r14+rax*1-0x1],0x0
+add    rax,0xffffffffffffffff
+test   eax,eax
+jne    12a1 <tgetinput+0xe1>
+mov    ebx,0xfffffffc
+lea    rdi,[rip+0xf70]        
+call   1050 <puts@plt>
+mov    eax,ebx
+add    rsp,0x90
+pop    rbx
+pop    r14
+pop    r15
+ret

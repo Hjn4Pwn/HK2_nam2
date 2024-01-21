@@ -1,0 +1,10 @@
+push typeone
+mov typeone typeone
+xor typeone typeone
+call typesix
+mov typeone typeone
+call typesix
+pop typeone
+ret
+cs typefour
+nop

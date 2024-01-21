@@ -1,0 +1,16 @@
+push typeone
+sub typeone typefive
+lea typeone typethree
+lea typeone typethree
+call typesix
+mov typeone typeone
+mov typeone typeone
+mov typeone typefive
+mov typeone typeone
+call typesix
+mov typeone typeone
+call typesix
+add typeone typefive
+pop typeone
+ret
+nop

@@ -1,0 +1,130 @@
+endbr64 
+mov    rdx,rsi
+test   rsi,rsi
+je     1760 <calculate_story_score+0x1d0>
+lea    rax,[rsi-0x1]
+cmp    rax,0xe
+jbe    1763 <calculate_story_score+0x1d3>
+mov    rcx,rsi
+pxor   xmm1,xmm1
+pxor   xmm6,xmm6
+mov    rax,rdi
+and    rcx,0xfffffffffffffff0
+pxor   xmm4,xmm4
+add    rcx,rdi
+nop    WORD PTR [rax+rax*1+0x0]
+movdqu xmm0,XMMWORD PTR [rax]
+movdqa xmm3,xmm6
+add    rax,0x10
+pcmpgtb xmm3,xmm0
+movdqa xmm2,xmm0
+punpcklbw xmm2,xmm3
+punpckhbw xmm0,xmm3
+movdqa xmm3,xmm4
+pcmpgtw xmm3,xmm2
+movdqa xmm5,xmm2
+punpcklwd xmm5,xmm3
+punpckhwd xmm2,xmm3
+movdqa xmm3,xmm0
+paddd  xmm1,xmm5
+paddd  xmm1,xmm2
+movdqa xmm2,xmm4
+pcmpgtw xmm2,xmm0
+punpcklwd xmm3,xmm2
+punpckhwd xmm0,xmm2
+paddd  xmm1,xmm3
+paddd  xmm1,xmm0
+cmp    rax,rcx
+jne    15d0 <calculate_story_score+0x40>
+movdqa xmm0,xmm1
+mov    rcx,rdx
+psrldq xmm0,0x8
+and    rcx,0xfffffffffffffff0
+paddd  xmm1,xmm0
+movdqa xmm0,xmm1
+psrldq xmm0,0x4
+paddd  xmm1,xmm0
+movd   eax,xmm1
+test   dl,0xf
+je     176c <calculate_story_score+0x1dc>
+movsx  esi,BYTE PTR [rdi+rcx*1]
+add    eax,esi
+lea    rsi,[rcx+0x1]
+cmp    rdx,rsi
+jbe    1762 <calculate_story_score+0x1d2>
+movsx  esi,BYTE PTR [rdi+rcx*1+0x1]
+add    eax,esi
+lea    rsi,[rcx+0x2]
+cmp    rdx,rsi
+jbe    1762 <calculate_story_score+0x1d2>
+movsx  esi,BYTE PTR [rdi+rcx*1+0x2]
+add    eax,esi
+lea    rsi,[rcx+0x3]
+cmp    rdx,rsi
+jbe    1762 <calculate_story_score+0x1d2>
+movsx  esi,BYTE PTR [rdi+rcx*1+0x3]
+add    eax,esi
+lea    rsi,[rcx+0x4]
+cmp    rdx,rsi
+jbe    1762 <calculate_story_score+0x1d2>
+movsx  esi,BYTE PTR [rdi+rcx*1+0x4]
+add    eax,esi
+lea    rsi,[rcx+0x5]
+cmp    rdx,rsi
+jbe    1762 <calculate_story_score+0x1d2>
+movsx  esi,BYTE PTR [rdi+rcx*1+0x5]
+add    eax,esi
+lea    rsi,[rcx+0x6]
+cmp    rdx,rsi
+jbe    1762 <calculate_story_score+0x1d2>
+movsx  esi,BYTE PTR [rdi+rcx*1+0x6]
+add    eax,esi
+lea    rsi,[rcx+0x7]
+cmp    rdx,rsi
+jbe    1762 <calculate_story_score+0x1d2>
+movsx  esi,BYTE PTR [rdi+rcx*1+0x7]
+add    eax,esi
+lea    rsi,[rcx+0x8]
+cmp    rdx,rsi
+jbe    1762 <calculate_story_score+0x1d2>
+movsx  esi,BYTE PTR [rdi+rcx*1+0x8]
+add    eax,esi
+lea    rsi,[rcx+0x9]
+cmp    rdx,rsi
+jbe    1762 <calculate_story_score+0x1d2>
+movsx  esi,BYTE PTR [rdi+rcx*1+0x9]
+add    eax,esi
+lea    rsi,[rcx+0xa]
+cmp    rdx,rsi
+jbe    1762 <calculate_story_score+0x1d2>
+movsx  esi,BYTE PTR [rdi+rcx*1+0xa]
+add    eax,esi
+lea    rsi,[rcx+0xb]
+cmp    rdx,rsi
+jbe    1762 <calculate_story_score+0x1d2>
+movsx  esi,BYTE PTR [rdi+rcx*1+0xb]
+add    eax,esi
+lea    rsi,[rcx+0xc]
+cmp    rdx,rsi
+jbe    1762 <calculate_story_score+0x1d2>
+movsx  esi,BYTE PTR [rdi+rcx*1+0xc]
+add    eax,esi
+lea    rsi,[rcx+0xd]
+cmp    rdx,rsi
+jbe    1762 <calculate_story_score+0x1d2>
+movsx  esi,BYTE PTR [rdi+rcx*1+0xd]
+add    eax,esi
+lea    rsi,[rcx+0xe]
+cmp    rdx,rsi
+jbe    1762 <calculate_story_score+0x1d2>
+movsx  edx,BYTE PTR [rdi+rcx*1+0xe]
+add    eax,edx
+ret    
+nop    WORD PTR [rax+rax*1+0x0]
+xor    eax,eax
+ret    
+xor    ecx,ecx
+xor    eax,eax
+jmp    1657 <calculate_story_score+0xc7>
+ret    
+nop    DWORD PTR [rax]

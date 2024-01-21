@@ -1,0 +1,10 @@
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x40
+lea    rdi,[rbp-0x40]
+mov    al,0x0
+call   1070 <gets@plt>
+add    rsp,0x40
+pop    rbp
+ret    
+nop    DWORD PTR [rax+0x0]

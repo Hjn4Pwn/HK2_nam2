@@ -1,0 +1,55 @@
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x20
+mov    QWORD PTR [rbp-0x8],rdi
+mov    DWORD PTR [rbp-0xc],esi
+mov    DWORD PTR [rbp-0x10],0x0
+mov    DWORD PTR [rbp-0x14],0x0
+mov    eax,DWORD PTR [rbp-0x14]
+cmp    eax,DWORD PTR [rbp-0xc]
+jae    1246 <readn+0x86>
+mov    rsi,QWORD PTR [rbp-0x8]
+mov    eax,DWORD PTR [rbp-0x14]
+add    rsi,rax
+xor    edi,edi
+mov    edx,0x1
+call   1070 <read@plt>
+mov    DWORD PTR [rbp-0x18],eax
+mov    eax,DWORD PTR [rbp-0x18]
+add    eax,DWORD PTR [rbp-0x10]
+mov    DWORD PTR [rbp-0x10],eax
+cmp    DWORD PTR [rbp-0x18],0x1
+jne    122e <readn+0x6e>
+mov    rax,QWORD PTR [rbp-0x8]
+mov    ecx,DWORD PTR [rbp-0x10]
+sub    ecx,0x1
+mov    ecx,ecx
+movsx  eax,BYTE PTR [rax+rcx*1]
+cmp    eax,0xa
+jne    1233 <readn+0x73>
+jmp    1246 <readn+0x86>
+jmp    1238 <readn+0x78>
+mov    eax,DWORD PTR [rbp-0x14]
+add    eax,0x1
+mov    DWORD PTR [rbp-0x14],eax
+jmp    11dd <readn+0x1d>
+cmp    DWORD PTR [rbp-0x10],0x0
+jne    125a <readn+0x9a>
+mov    edi,0xffffffff
+call   10b0 <exit@plt>
+mov    rax,QWORD PTR [rbp-0x8]
+mov    ecx,DWORD PTR [rbp-0x10]
+sub    ecx,0x1
+mov    ecx,ecx
+movsx  eax,BYTE PTR [rax+rcx*1]
+cmp    eax,0xa
+jne    1283 <readn+0xc3>
+mov    rax,QWORD PTR [rbp-0x8]
+mov    ecx,DWORD PTR [rbp-0x10]
+sub    ecx,0x1
+mov    ecx,ecx
+mov    BYTE PTR [rax+rcx*1],0x0
+add    rsp,0x20
+pop    rbp
+ret    
+nop    DWORD PTR [rax+0x0]

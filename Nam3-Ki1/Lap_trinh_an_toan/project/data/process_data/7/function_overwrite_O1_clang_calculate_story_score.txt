@@ -1,0 +1,15 @@
+test   rsi,rsi
+je     11f0 <calculate_story_score+0x20>
+xor    ecx,ecx
+xor    eax,eax
+nop    DWORD PTR [rax+0x0]
+movsx  edx,BYTE PTR [rdi+rcx*1]
+add    eax,edx
+add    rcx,0x1
+cmp    rsi,rcx
+jne    11e0 <calculate_story_score+0x10>
+ret    
+xor    eax,eax
+ret    
+cs nop WORD PTR [rax+rax*1+0x0]
+nop    DWORD PTR [rax]

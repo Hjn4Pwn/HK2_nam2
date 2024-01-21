@@ -1,0 +1,15 @@
+endbr64
+test typeone typeone
+je typeseven
+mov typeone typeone
+add typeone typeone
+mov typeone typefive
+movsx typeone typetwo
+add typeone typeone
+add typeone typefive
+cmp typeone typeone
+jne typeseven
+mov typeone typeone
+ret
+mov typeone typefive
+jmp typeseven

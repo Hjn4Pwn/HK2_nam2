@@ -1,0 +1,3 @@
+endbr64 
+lea    rdi,[rip+0xc69]        
+jmp    1120 <system@plt>

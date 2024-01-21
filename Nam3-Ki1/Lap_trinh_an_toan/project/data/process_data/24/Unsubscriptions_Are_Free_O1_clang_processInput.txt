@@ -1,0 +1,68 @@
+push   rax
+lea    rdi,[rip+0xc9f]        
+lea    rsi,[rip+0x2bd9]        
+xor    eax,eax
+call   1100 <__isoc99_scanf@plt>
+call   1030 <__ctype_toupper_loc@plt>
+mov    rax,QWORD PTR [rax]
+movsx  rcx,BYTE PTR [rip+0x2bc2]        
+mov    eax,DWORD PTR [rax+rcx*4]
+mov    BYTE PTR [rip+0x2bb9],al        
+movsx  eax,al
+add    eax,0xffffffbb
+cmp    eax,0xe
+ja     15e8 <processInput+0x118>
+lea    rcx,[rip+0xaef]        
+movsxd rax,DWORD PTR [rcx+rax*4]
+add    rax,rcx
+jmp    rax
+mov    rax,QWORD PTR [rip+0x2b8b]        
+lea    rcx,[rip+0xfffffffffffffed4]        
+jmp    15ce <processInput+0xfe>
+lea    rdi,[rip+0xbe4]        
+call   1050 <puts@plt>
+lea    rdi,[rip+0xc09]        
+call   1050 <puts@plt>
+mov    edi,0x8
+call   10c0 <malloc@plt>
+mov    edx,0x8
+xor    edi,edi
+mov    rsi,rax
+call   1090 <read@plt>
+pop    rax
+ret    
+mov    rax,QWORD PTR [rip+0x2b45]        
+lea    rcx,[rip+0xfffffffffffffe3e]        
+mov    QWORD PTR [rax],rcx
+lea    rdi,[rip+0xcf6]        
+call   1050 <puts@plt>
+lea    rdi,[rip+0xd06]        
+call   1050 <puts@plt>
+lea    rdi,[rip+0xd1b]        
+call   1050 <puts@plt>
+call   1290 <getsline>
+mov    rcx,QWORD PTR [rip+0x2b0b]        
+mov    QWORD PTR [rcx+0x8],rax
+pop    rax
+ret    
+mov    rax,QWORD PTR [rip+0x2afe]        
+lea    rcx,[rip+0xfffffffffffffde7]        
+jmp    15ce <processInput+0xfe>
+mov    rax,QWORD PTR [rip+0x2aee]        
+test   rax,rax
+je     15d3 <processInput+0x103>
+lea    rcx,[rip+0xfffffffffffffda2]        
+mov    QWORD PTR [rax],rcx
+pop    rax
+ret    
+lea    rdi,[rip+0xc89]        
+call   1050 <puts@plt>
+pop    rax
+ret    
+xor    edi,edi
+call   1110 <exit@plt>
+lea    rdi,[rip+0xcd6]        
+call   1050 <puts@plt>
+mov    edi,0x1
+call   1110 <exit@plt>
+xchg   ax,ax

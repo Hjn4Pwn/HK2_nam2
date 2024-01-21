@@ -1,0 +1,22 @@
+endbr64 
+push   rbx
+sub    rsp,0x30
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rsp+0x28],rax
+xor    eax,eax
+mov    rbx,rsp
+mov    rdi,rbx
+call   1229 <set_element>
+mov    rdi,rbx
+call   1229 <set_element>
+mov    rdi,rbx
+call   1229 <set_element>
+mov    rdi,rbx
+call   1229 <set_element>
+mov    rax,QWORD PTR [rsp+0x28]
+sub    rax,QWORD PTR fs
+jne    1354 <justpwnit+0x52>
+add    rsp,0x30
+pop    rbx
+ret    
+call   10c0 <__stack_chk_fail@plt>

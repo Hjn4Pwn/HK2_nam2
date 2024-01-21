@@ -1,0 +1,72 @@
+endbr64 
+push   r12
+push   rbp
+push   rbx
+sub    rsp,0xa0
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rsp+0x98],rax
+xor    eax,eax
+test   esi,esi
+je     1343 <tgetinput+0xda>
+mov    rbp,rdi
+mov    r12d,esi
+lea    rax,[rsp+0x10]
+lea    rdx,[rsp+0x90]
+mov    QWORD PTR [rax],0x0
+add    rax,0x8
+cmp    rax,rdx
+jne    12a6 <tgetinput+0x3d>
+or     QWORD PTR [rsp+0x10],0x1
+mov    QWORD PTR [rsp],0x3c
+mov    QWORD PTR [rsp+0x8],0x0
+lea    rsi,[rsp+0x10]
+mov    r8,rsp
+mov    ecx,0x0
+mov    edx,0x0
+mov    edi,0x1
+call   1130 <select@plt>
+mov    ebx,eax
+cmp    eax,0xffffffff
+je     1356 <tgetinput+0xed>
+test   eax,eax
+je     137f <tgetinput+0x116>
+lea    edx,[r12-0x1]
+mov    rsi,rbp
+mov    edi,0x0
+call   1110 <read@plt>
+mov    edx,eax
+movsxd rcx,eax
+lea    rcx,[rbp+rcx*1-0x1]
+cmp    BYTE PTR [rcx],0xa
+je     1364 <tgetinput+0xfb>
+test   edx,edx
+je     136c <tgetinput+0x103>
+mov    ebx,0x0
+mov    rax,QWORD PTR [rsp+0x98]
+sub    rax,QWORD PTR fs
+jne    1392 <tgetinput+0x129>
+mov    eax,ebx
+add    rsp,0xa0
+pop    rbx
+pop    rbp
+pop    r12
+ret    
+lea    rdi,[rip+0xcbe]        
+call   10f0 <puts@plt>
+mov    ebx,0xfffffffe
+jmp    1322 <tgetinput+0xb9>
+lea    rdi,[rip+0xe97]        
+call   10f0 <puts@plt>
+jmp    1322 <tgetinput+0xb9>
+lea    edx,[rax-0x1]
+mov    BYTE PTR [rcx],0x0
+jmp    1319 <tgetinput+0xb0>
+lea    rdi,[rip+0xe9b]        
+call   10f0 <puts@plt>
+mov    ebx,0xfffffffc
+jmp    1322 <tgetinput+0xb9>
+lea    rdi,[rip+0xcb2]        
+call   10f0 <puts@plt>
+mov    ebx,0xfffffffd
+jmp    1322 <tgetinput+0xb9>
+call   1100 <__stack_chk_fail@plt>

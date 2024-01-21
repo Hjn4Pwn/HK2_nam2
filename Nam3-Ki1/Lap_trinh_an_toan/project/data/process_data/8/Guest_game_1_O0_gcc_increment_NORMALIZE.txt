@@ -1,0 +1,8 @@
+endbr64
+push typeone
+mov typeone typeone
+mov typethree typeone
+mov typeone typethree
+add typeone typefive
+pop typeone
+ret

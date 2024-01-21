@@ -1,0 +1,53 @@
+endbr64 
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x230
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rbp-0x8],rax
+xor    eax,eax
+mov    eax,0x0
+call   1249 <get_random>
+cqo    
+shr    rdx,0x34
+add    rax,rdx
+and    eax,0xfff
+sub    rax,rdx
+add    rax,0x1
+mov    QWORD PTR [rbp-0x220],rax
+mov    DWORD PTR [rbp-0x224],0x0
+lea    rax,[rip+0xd4a]        
+mov    rdi,rax
+call   10d0 <puts@plt>
+mov    rdx,QWORD PTR [rip+0x2d53]        
+lea    rax,[rbp-0x210]
+mov    esi,0x200
+mov    rdi,rax
+call   1110 <fgets@plt>
+lea    rax,[rbp-0x210]
+mov    rdi,rax
+call   1150 <atol@plt>
+mov    QWORD PTR [rbp-0x218],rax
+cmp    QWORD PTR [rbp-0x218],0x0
+jne    1312 <do_stuff+0xa9>
+lea    rax,[rip+0xd25]        
+mov    rdi,rax
+call   10d0 <puts@plt>
+jmp    134c <do_stuff+0xe3>
+mov    rax,QWORD PTR [rbp-0x218]
+cmp    rax,QWORD PTR [rbp-0x220]
+jne    133d <do_stuff+0xd4>
+lea    rax,[rip+0xd1f]        
+mov    rdi,rax
+call   10d0 <puts@plt>
+mov    DWORD PTR [rbp-0x224],0x1
+jmp    134c <do_stuff+0xe3>
+lea    rax,[rip+0xd3c]        
+mov    rdi,rax
+call   10d0 <puts@plt>
+mov    eax,DWORD PTR [rbp-0x224]
+mov    rdx,QWORD PTR [rbp-0x8]
+sub    rdx,QWORD PTR fs
+je     1366 <do_stuff+0xfd>
+call   10e0 <__stack_chk_fail@plt>
+leave  
+ret

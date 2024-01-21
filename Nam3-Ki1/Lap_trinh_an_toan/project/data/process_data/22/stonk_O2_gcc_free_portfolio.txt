@@ -1,0 +1,19 @@
+endbr64 
+push   rbp
+mov    rbp,rdi
+push   rbx
+sub    rsp,0x8
+mov    rbx,QWORD PTR [rdi+0x8]
+test   rbx,rbx
+je     1731 <free_portfolio+0x31>
+cs nop WORD PTR [rax+rax*1+0x0]
+mov    rdi,rbx
+mov    rbx,QWORD PTR [rbx+0x10]
+call   1130 <free@plt>
+test   rbx,rbx
+jne    1720 <free_portfolio+0x20>
+add    rsp,0x8
+mov    rdi,rbp
+pop    rbx
+pop    rbp
+jmp    1130 <free@plt>

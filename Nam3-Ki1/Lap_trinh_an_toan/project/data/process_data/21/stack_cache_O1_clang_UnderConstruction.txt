@@ -1,0 +1,16 @@
+push   rax
+lea    rdi,[rip+0xe25]        
+xor    eax,eax
+call   1050 <printf@plt>
+lea    rdi,[rip+0xe3d]        
+xor    eax,eax
+call   1050 <printf@plt>
+lea    rdi,[rip+0xe48]        
+xor    eax,eax
+call   1050 <printf@plt>
+mov    rax,QWORD PTR [rip+0x2d7e]        
+mov    rdi,QWORD PTR [rax]
+call   1080 <fflush@plt>
+pop    rax
+ret    
+nop    DWORD PTR [rax+0x0]

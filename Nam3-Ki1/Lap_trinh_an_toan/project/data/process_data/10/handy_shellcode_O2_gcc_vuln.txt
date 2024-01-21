@@ -1,0 +1,8 @@
+endbr64 
+push   rbp
+xor    eax,eax
+mov    rbp,rdi
+call   10d0 <gets@plt>
+mov    rdi,rbp
+pop    rbp
+jmp    10a0 <puts@plt>

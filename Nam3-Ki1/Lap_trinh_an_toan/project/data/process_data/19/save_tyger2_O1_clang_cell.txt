@@ -1,0 +1,24 @@
+push   rbx
+sub    rsp,0x40
+lea    rdi,[rip+0xe83]        
+call   1030 <puts@plt>
+lea    rdi,[rip+0xe6c]        
+lea    rsi,[rip+0xe6e]        
+call   1060 <fopen@plt>
+test   rax,rax
+jne    11bf <cell+0x3f>
+lea    rdi,[rip+0xe9a]        
+call   1030 <puts@plt>
+mov    edi,0x1
+call   1070 <exit@plt>
+mov    rbx,rsp
+mov    rdi,rbx
+mov    esi,0x40
+mov    rdx,rax
+call   1040 <fgets@plt>
+mov    rdi,rbx
+call   1030 <puts@plt>
+xor    edi,edi
+call   1070 <exit@plt>
+cs nop WORD PTR [rax+rax*1+0x0]
+nop    DWORD PTR [rax+rax*1+0x0]

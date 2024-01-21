@@ -1,0 +1,24 @@
+push   rax
+lea    rdi,[rip+0xe5c]        
+call   1050 <puts@plt>
+lea    rdi,[rip+0xe62]        
+call   1050 <puts@plt>
+lea    rdi,[rip+0xe5e]        
+call   1050 <puts@plt>
+lea    rdi,[rip+0xe5a]        
+call   1050 <puts@plt>
+lea    rdi,[rip+0xe56]        
+call   1050 <puts@plt>
+lea    rdi,[rip+0xe65]        
+lea    rsi,[rsp+0x4]
+xor    eax,eax
+call   1080 <__isoc99_scanf@plt>
+mov    rax,QWORD PTR [rip+0x2de9]        
+mov    rdi,QWORD PTR [rax]
+call   1090 <getc@plt>
+mov    edi,0xa
+call   1030 <putchar@plt>
+mov    eax,DWORD PTR [rsp+0x4]
+pop    rcx
+ret    
+nop

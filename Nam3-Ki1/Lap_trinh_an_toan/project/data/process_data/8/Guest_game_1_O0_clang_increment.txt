@@ -1,0 +1,9 @@
+push   rbp
+mov    rbp,rsp
+mov    QWORD PTR [rbp-0x8],rdi
+mov    rax,QWORD PTR [rbp-0x8]
+add    rax,0x1
+pop    rbp
+ret    
+cs nop WORD PTR [rax+rax*1+0x0]
+nop    DWORD PTR [rax+0x0]

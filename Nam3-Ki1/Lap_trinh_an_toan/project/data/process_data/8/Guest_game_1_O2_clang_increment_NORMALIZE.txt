@@ -1,0 +1,4 @@
+lea typeone typethree
+ret
+cs typefour
+nop

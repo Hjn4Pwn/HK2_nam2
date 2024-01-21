@@ -1,0 +1,13 @@
+endbr64 
+sub    rsp,0x58
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rsp+0x48],rax
+xor    eax,eax
+mov    rdi,rsp
+call   1120 <gets@plt>
+mov    rax,QWORD PTR [rsp+0x48]
+sub    rax,QWORD PTR fs
+jne    13c5 <vuln_60+0x35>
+add    rsp,0x58
+ret    
+call   10f0 <__stack_chk_fail@plt>

@@ -1,0 +1,24 @@
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x20
+mov    QWORD PTR [rbp-0x8],rdi
+mov    rax,QWORD PTR [rbp-0x8]
+mov    rax,QWORD PTR [rax+0x8]
+mov    QWORD PTR [rbp-0x10],rax
+mov    QWORD PTR [rbp-0x18],0x0
+cmp    QWORD PTR [rbp-0x10],0x0
+je     15ed <free_portfolio+0x4d>
+mov    rax,QWORD PTR [rbp-0x10]
+mov    rax,QWORD PTR [rax+0x10]
+mov    QWORD PTR [rbp-0x18],rax
+mov    rdi,QWORD PTR [rbp-0x10]
+call   1030 <free@plt>
+mov    rax,QWORD PTR [rbp-0x18]
+mov    QWORD PTR [rbp-0x10],rax
+jmp    15c0 <free_portfolio+0x20>
+mov    rdi,QWORD PTR [rbp-0x8]
+call   1030 <free@plt>
+add    rsp,0x20
+pop    rbp
+ret    
+nop    DWORD PTR [rax+0x0]

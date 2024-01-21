@@ -1,0 +1,17 @@
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x80
+lea    rdi,[rip+0xe92]        
+mov    al,0x0
+call   1030 <printf@plt>
+lea    rdi,[rbp-0x80]
+xor    esi,esi
+mov    edx,0x80
+call   1040 <memset@plt>
+lea    rdi,[rbp-0x80]
+mov    al,0x0
+call   1050 <gets@plt>
+add    rsp,0x80
+pop    rbp
+ret    
+nop    DWORD PTR [rax]

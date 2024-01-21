@@ -1,0 +1,16 @@
+endbr64 
+sub    rsp,0x28
+lea    rdi,[rip+0xb91]        
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rsp+0x18],rax
+xor    eax,eax
+call   10a0 <puts@plt>
+xor    eax,eax
+mov    rdi,rsp
+call   10d0 <gets@plt>
+mov    rax,QWORD PTR [rsp+0x18]
+sub    rax,QWORD PTR fs
+jne    1553 <ask_baby_name+0x43>
+add    rsp,0x28
+ret    
+call   10b0 <__stack_chk_fail@plt>

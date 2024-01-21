@@ -1,0 +1,51 @@
+endbr64 
+push   r13
+lea    rsi,[rip+0xcb7]        
+lea    rdi,[rip+0xcb2]        
+push   r12
+push   rbp
+sub    rsp,0xa0
+mov    rax,QWORD PTR fs
+mov    QWORD PTR [rsp+0x98],rax
+xor    eax,eax
+call   1190 <fopen@plt>
+test   rax,rax
+je     13ef <win_crash+0xaf>
+mov    rdi,rax
+mov    r12,rax
+call   1170 <fileno@plt>
+mov    rsi,rsp
+mov    edi,eax
+call   11b0 <fstat@plt>
+test   eax,eax
+jne    13d9 <win_crash+0x99>
+mov    r13,QWORD PTR [rsp+0x30]
+mov    esi,0x1
+lea    rdi,[r13+0x1]
+call   1150 <calloc@plt>
+mov    rbp,rax
+test   rax,rax
+je     1405 <win_crash+0xc5>
+mov    rcx,r12
+mov    rdx,r13
+mov    esi,0x1
+mov    rdi,rax
+call   1120 <fread@plt>
+mov    rdi,rbp
+call   1110 <puts@plt>
+mov    rdi,rbp
+call   1100 <free@plt>
+xor    edi,edi
+call   11a0 <exit@plt>
+lea    rdi,[rip+0xcb0]        
+call   1110 <puts@plt>
+mov    edi,0x1
+call   11a0 <exit@plt>
+lea    rdi,[rip+0xc4a]        
+call   1110 <puts@plt>
+mov    edi,0x1
+call   11a0 <exit@plt>
+lea    rdi,[rip+0xc03]        
+call   1110 <puts@plt>
+mov    edi,0x1
+call   11a0 <exit@plt>

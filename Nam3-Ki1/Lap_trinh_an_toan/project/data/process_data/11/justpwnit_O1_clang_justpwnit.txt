@@ -1,0 +1,16 @@
+push   rbp
+push   rbx
+sub    rsp,0x28
+mov    ebp,0x4
+mov    rbx,rsp
+xchg   ax,ax
+mov    rdi,rbx
+call   11a0 <set_element>
+add    ebp,0xffffffff
+jne    1240 <justpwnit+0x10>
+add    rsp,0x28
+pop    rbx
+pop    rbp
+ret    
+cs nop WORD PTR [rax+rax*1+0x0]
+xchg   ax,ax

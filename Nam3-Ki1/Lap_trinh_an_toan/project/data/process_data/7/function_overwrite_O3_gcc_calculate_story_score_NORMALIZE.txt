@@ -1,0 +1,130 @@
+endbr64
+mov typeone typeone
+test typeone typeone
+je typeseven
+lea typeone typethree
+cmp typeone typefive
+jbe typeseven
+mov typeone typeone
+pxor typeeight typeeight
+pxor typeeight typeeight
+mov typeone typeone
+and typeone typefive
+pxor typeeight typeeight
+add typeone typeone
+nop typefour
+movdqu typeeight typetwo
+movdqa typeeight typeeight
+add typeone typefive
+pcmpgtb typeeight typeeight
+movdqa typeeight typeeight
+punpcklbw typeeight typeeight
+punpckhbw typeeight typeeight
+movdqa typeeight typeeight
+pcmpgtw typeeight typeeight
+movdqa typeeight typeeight
+punpcklwd typeeight typeeight
+punpckhwd typeeight typeeight
+movdqa typeeight typeeight
+paddd typeeight typeeight
+paddd typeeight typeeight
+movdqa typeeight typeeight
+pcmpgtw typeeight typeeight
+punpcklwd typeeight typeeight
+punpckhwd typeeight typeeight
+paddd typeeight typeeight
+paddd typeeight typeeight
+cmp typeone typeone
+jne typeseven
+movdqa typeeight typeeight
+mov typeone typeone
+psrldq typeeight typefive
+and typeone typefive
+paddd typeeight typeeight
+movdqa typeeight typeeight
+psrldq typeeight typefive
+paddd typeeight typeeight
+movd typeone typeeight
+test typeeight typefive
+je typeseven
+movsx typeone typethree
+add typeone typeone
+lea typeone typethree
+cmp typeone typeone
+jbe typeseven
+movsx typeone typefour
+add typeone typeone
+lea typeone typethree
+cmp typeone typeone
+jbe typeseven
+movsx typeone typefour
+add typeone typeone
+lea typeone typethree
+cmp typeone typeone
+jbe typeseven
+movsx typeone typefour
+add typeone typeone
+lea typeone typethree
+cmp typeone typeone
+jbe typeseven
+movsx typeone typefour
+add typeone typeone
+lea typeone typethree
+cmp typeone typeone
+jbe typeseven
+movsx typeone typefour
+add typeone typeone
+lea typeone typethree
+cmp typeone typeone
+jbe typeseven
+movsx typeone typefour
+add typeone typeone
+lea typeone typethree
+cmp typeone typeone
+jbe typeseven
+movsx typeone typefour
+add typeone typeone
+lea typeone typethree
+cmp typeone typeone
+jbe typeseven
+movsx typeone typefour
+add typeone typeone
+lea typeone typethree
+cmp typeone typeone
+jbe typeseven
+movsx typeone typefour
+add typeone typeone
+lea typeone typethree
+cmp typeone typeone
+jbe typeseven
+movsx typeone typefour
+add typeone typeone
+lea typeone typethree
+cmp typeone typeone
+jbe typeseven
+movsx typeone typefour
+add typeone typeone
+lea typeone typethree
+cmp typeone typeone
+jbe typeseven
+movsx typeone typefour
+add typeone typeone
+lea typeone typethree
+cmp typeone typeone
+jbe typeseven
+movsx typeone typefour
+add typeone typeone
+lea typeone typethree
+cmp typeone typeone
+jbe typeseven
+movsx typeone typefour
+add typeone typeone
+ret
+nop typefour
+xor typeone typeone
+ret
+xor typeone typeone
+xor typeone typeone
+jmp typeseven
+ret
+nop typetwo

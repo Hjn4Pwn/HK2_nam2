@@ -1,0 +1,31 @@
+push   rbp
+mov    rbp,rsp
+sub    rsp,0x10
+lea    rdi,[rip+0xdbe]        
+lea    rsi,[rip+0xda0]        
+call   10e0 <fopen@plt>
+mov    QWORD PTR [rbp-0x8],rax
+cmp    QWORD PTR [rbp-0x8],0x0
+jne    12ec <read_canary+0x5c>
+lea    rdi,[rip+0xd4c]        
+lea    rsi,[rip+0xda0]        
+lea    rdx,[rip+0xdd0]        
+mov    al,0x0
+call   1070 <printf@plt>
+mov    rax,QWORD PTR [rip+0x2d03]        
+mov    rdi,QWORD PTR [rax]
+call   10a0 <fflush@plt>
+xor    edi,edi
+call   10f0 <exit@plt>
+mov    rcx,QWORD PTR [rbp-0x8]
+lea    rdi,[rip+0x2d9a]        
+mov    esi,0x1
+mov    edx,0x4
+call   1040 <fread@plt>
+mov    rdi,QWORD PTR [rbp-0x8]
+call   1050 <fclose@plt>
+add    rsp,0x10
+pop    rbp
+ret    
+cs nop WORD PTR [rax+rax*1+0x0]
+nop
